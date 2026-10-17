@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>オレカバトル2 コマンド＆キャパシティシミュレーター</title>
+  <!-- Tailwind CSS (UIデザイン用) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons (アイコン用) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { background-color: #0f172a; color: #f8fafc; font-family: sans-serif; }
+    .glass-card { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.1); }
+  </style>
+</head>
+<body class="min-h-screen pb-12">
+
+  <!-- ヘッダー -->
+  <header class="border-b border-slate-800 bg-slate-900/80 sticky top-0 z-50 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-wrap justify-between items-center gap-4">
+      <div class="flex items-center gap-3">
+        <div class="p-2 bg-amber-500/20 text-amber-400 rounded-lg border border-amber-500/30">
+          <i data-lucide="swords" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <h1 class="font-bold text-lg text-slate-100">オレカバトル2 コマンドシミュレーター</h1>
+          <p class="text-xs text-slate-400">育成・キャパシティ計算ツール</p>
+        </div>
+      </div>
+      
+      <!-- モンスター選択 -->
+      <div class="flex items-center gap-2 w-full sm:w-auto">
+        <label for="monsterSelect" class="text-xs font-semibold text-slate-300 whitespace-nowrap">モンスター選択:</label>
+        <select id="monsterSelect" onchange="selectMonster(this.value)" class="bg-slate-800 border border-slate-700 text-amber-400 text-sm rounded-lg px-3 py-2 w-full sm:w-64 focus:ring-2 focus:ring-amber-500 outline-none">
+          <!-- JSで自動的に選択肢を読み込みます -->
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main class="max-w-7xl mx-auto px-4 mt-6">
+    
+    <!-- モンスター基本情報バー -->
+    <div id="monsterHeader" class="glass-card rounded-2xl p-6 mb-6 flex flex-wrap justify-between items-center gap-4">
+      <div>
+        <span class="text-xs font-bold px-2.5 py-1 rounded bg-amber-500/20 text-amber-400 border border-amber-500/30">SELECTED</span>
+        <h2 id="monsterName" class="text-2xl font-bold text-white mt-1">--</h2>
+      </div>
+      <div class="text-right">
+        <span class="text-xs text-slate-400">対応ファイル状態</span>
+        <div class="text-xs text-emerald-400 font-mono mt-1">skills.js & monsters.js 読み込み完了</div>
+      </div>
+    </div>
+
+    <!-- 4つのリールカード (★1〜★4) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- 各リールのテンプレート -->
+      <script>
+        // JSでリール1〜4を動的に生成します
+      </script>
+      <div id="reelsContainer" class="contents"></div>
+
+    </div>
+
+  </main>
+
+  <!-- 外部データの読み込み (必ずこの順番で読み込みます) -->
+  <script src="skills.js"></script>
+  <script src="monsters.js"></script>
+
+  <!-- アプリメイン処理 -->
+  <script>
+    // 現在選択中のモンスターデータ・リール配置データ
+    let currentMonster = null;
+    let currentReels = [[], [], [], []]; // 4リール分 (各6枠)
+
+    // 初期化処理
+    window.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+      initMonsterSelect();
+    });
+
+    // モンスター選択肢の初期化
+    function initMonsterSelect() {
+      const select = document.getElementById('monsterSelect');
+      select.innerHTML = '';
+
+      if (typeof MONSTERS === 'undefined' || !MONSTERS.length) {
+        select.innerHTML = '<option value="">monsters.js が読み込めません</option>';
+        return;
+      }
+
+      MONSTERS.forEach((m, index) => {
+        const option = document.createElement('option');
+        option.value = m.id;
+        option.textContent = m.name;
+        select.appendChild(option);
+      });
+
+      // 最初のモンスターを選択
+      selectMonster(MONSTERS[0].id);
+    }
+
+    // モンスターの切り替え
+    function selectMonster(monsterId) {
+      currentMonster = MONSTERS.find(m => m.id === monsterId);
+      if (!currentMonster) return;
+
+      document.getElementById('monsterName').textContent = currentMonster.name;
+
+      // 初期配置リールのセット (無ければ空枠で埋める)
+      currentReels = [0, 1, 2, 3].map(reelIdx => {
+        const initial = currentMonster.initialReels ? currentMonster.initialReels[reelIdx] : [];
+        const reel = [];
+        for (let slotIdx = 0; slotIdx < 6; slotIdx++) {
+          reel.push(initial[slotIdx] || 'miss');
+        }
+        return reel;
+      });
+
+      renderReels();
+    }
+
+    // 覚える技のプルダウン選択肢（<option>）を生成
+    function generateSkillOptions(selectedSkillId) {
+      if (typeof SKILLS === 'undefined') return '';
+
+      const availableIds = currentMonster.availableSkillIds || Object.keys(SKILLS);
+      return availableIds.map(id => {
+        const skill = SKILLS[id];
+        if (!skill) return '';
+        const selected = (id === selectedSkillId) ? 'selected' : '';
+        return `<option value="${id}" ${selected}>${skill.name} (コスト:${skill.cost})</option>`;
+      }).join('');
+    }
+
+    // リール画面の描画
+    function renderReels() {
+      const container = document.getElementById('reelsContainer');
+      container.innerHTML = '';
+
+      currentReels.forEach((reelSkills, reelIdx) => {
+        const maxCap = currentMonster.maxCapacity[reelIdx] || 0;
+        
+        // 使用中キャパシティの計算
+        let usedCap = 0;
+        reelSkills.forEach(skillId => {
+          if (SKILLS[skillId]) {
+            usedCap += SKILLS[skillId].cost;
+          }
+        });
+
+        const usagePercent = maxCap > 0 ? Math.min(100, (usedCap / maxCap) * 100) : 0;
+        const isOver = usedCap > maxCap;
+
+        // リールカードのHTML
+        const reelCard = document.createElement('div');
+        reelCard.className = 'glass-card rounded-2xl p-5 flex flex-col justify-between';
+        
+        let slotsHtml = '';
+        for (let slotIdx = 0; slotIdx < 6; slotIdx++) {
+          const currentSkillId = reelSkills[slotIdx];
+          slotsHtml += `
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-mono text-slate-500 w-4">${slotIdx + 1}</span>
+              <select onchange="updateSlot(${reelIdx}, ${slotIdx}, this.value)" class="bg-slate-900 border border-slate-700/80 text-slate-200 text-xs rounded-lg px-2.5 py-2 w-full focus:ring-1 focus:ring-amber-500 outline-none">
+                ${generateSkillOptions(currentSkillId)}
+              </select>
+            </div>
+          `;
+        }
+
+        reelCard.innerHTML = `
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <h3 class="font-bold text-amber-400 flex items-center gap-1.5">
+                <span>★${reelIdx + 1}</span>
+                <span class="text-xs text-slate-400 font-normal">リール</span>
+              </h3>
+              <span class="text-xs font-mono px-2 py-0.5 rounded ${isOver ? 'bg-rose-500/20 text-rose-400 border border-rose-500/30' : 'bg-slate-800 text-slate-300'}">
+                ${usedCap.toFixed(1)} / ${maxCap.toFixed(1)}
+              </span>
+            </div>
+
+            <!-- キャパシティメーター -->
+            <div class="w-full bg-slate-900 rounded-full h-2 mb-4 overflow-hidden border border-slate-800">
+              <div class="h-full rounded-full transition-all duration-300 ${isOver ? 'bg-rose-500' : 'bg-amber-400'}" style="width: ${usagePercent}%"></div>
+            </div>
+
+            <!-- 6つのスロット -->
+            <div class="space-y-2">
+              ${slotsHtml}
+            </div>
+          </div>
+        `;
+
+        container.appendChild(reelCard);
+      });
+
+      lucide.createIcons();
+    }
+
+    // スロットの技が変更されたとき
+    function updateSlot(reelIdx, slotIdx, newSkillId) {
+      currentReels[reelIdx][slotIdx] = newSkillId;
+      renderReels();
+    }
+  </script>
+</body>
+</html>
