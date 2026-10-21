@@ -4,168 +4,314 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>オレカバトル2 コマンド＆キャパシティシミュレーター</title>
-  <!-- Tailwind CSS (UIデザイン用) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Lucide Icons (アイコン用) -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <style>
-    body { background-color: #0f172a; color: #f8fafc; font-family: sans-serif; }
-    .glass-card { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.1); }
-  </style>
+  <!-- メインスタイルシート -->
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="min-h-screen pb-12">
+<body>
 
-  <!-- ヘッダー -->
-  <header class="border-b border-slate-800 bg-slate-900/80 sticky top-0 z-50 backdrop-blur">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-wrap justify-between items-center gap-4">
-      <div class="flex items-center gap-3">
-        <div class="p-2 bg-amber-500/20 text-amber-400 rounded-lg border border-amber-500/30">
-          <i data-lucide="swords" class="w-6 h-6"></i>
-        </div>
+  <!-- 画面上部：ヘッダーナビゲーション -->
+  <header>
+    <div class="header-container">
+      <div class="title-group">
+        <div class="title-icon">⚔️</div>
         <div>
-          <h1 class="font-bold text-lg text-slate-100">オレカバトル2 コマンドシミュレーター</h1>
-          <p class="text-xs text-slate-400">育成・キャパシティ計算ツール</p>
+          <h1 style="font-size: 1.125rem; font-weight: bold;">オレカバトル2 コマンドシミュレーター</h1>
+          <p style="font-size: 0.75rem; color: #94a3b8;">育成・キャパシティ計算ツール</p>
         </div>
       </div>
       
-      <!-- モンスター選択 -->
-      <div class="flex items-center gap-2 w-full sm:w-auto">
-        <label for="monsterSelect" class="text-xs font-semibold text-slate-300 whitespace-nowrap">モンスター選択:</label>
-        <select id="monsterSelect" onchange="selectMonster(this.value)" class="bg-slate-800 border border-slate-700 text-amber-400 text-sm rounded-lg px-3 py-2 w-full sm:w-64 focus:ring-2 focus:ring-amber-500 outline-none">
-          <!-- JSで自動的に選択肢を読み込みます -->
-        </select>
+      <!-- ヘッダー操作UI（章選択・モンスター選択・お気に入り・編集画面移行） -->
+      <div class="header-actions">
+        <div>
+          <label for="chapterSelect" style="font-size: 0.75rem; font-weight: 600; color: #cbd5e1;">章:</label>
+          <select id="chapterSelect" onchange="onChapterChange(this.value)"></select>
+        </div>
+        <div>
+          <label for="monsterSelect" style="font-size: 0.75rem; font-weight: 600; color: #cbd5e1;">モンスター:</label>
+          <select id="monsterSelect" onchange="selectMonster(this.value)"></select>
+        </div>
+        <button class="btn btn-amber" onclick="openFavoritesModal()">⭐ お気に入り一覧</button>
+        <a href="admin.html" class="btn" style="text-decoration: none; font-size: 0.875rem;">🛠️ データ編集</a>
       </div>
     </div>
   </header>
 
-  <!-- メインコンテンツ -->
-  <main class="max-w-7xl mx-auto px-4 mt-6">
-    
-    <!-- モンスター基本情報バー -->
-    <div id="monsterHeader" class="glass-card rounded-2xl p-6 mb-6 flex flex-wrap justify-between items-center gap-4">
+  <!-- メインコンテンツ領域 -->
+  <main>
+    <!-- モンスター基本ステータスカード -->
+    <div class="glass-card monster-info">
       <div>
-        <span class="text-xs font-bold px-2.5 py-1 rounded bg-amber-500/20 text-amber-400 border border-amber-500/30">SELECTED</span>
-        <h2 id="monsterName" class="text-2xl font-bold text-white mt-1">--</h2>
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem; align-items: center; flex-wrap: wrap;">
+          <span class="badge badge-amber">SELECTED</span>
+          <span id="monsterIdBadge" class="badge badge-id">ID: --</span>
+          <span id="monsterChapter" class="badge badge-slate">--</span>
+          <span id="monsterAttribute" class="badge badge-slate">--</span>
+          <span id="monsterRace" class="badge badge-slate">--</span>
+        </div>
+        <h2 id="monsterName" style="font-size: 1.5rem; font-weight: bold; color: #ffffff;">--</h2>
+        <p id="monsterStats" style="font-size: 0.75rem; color: #94a3b8; margin-top: 0.5rem; font-family: monospace;">--</p>
+        <p id="monsterExSkill" style="font-size: 0.75rem; color: #fcd34d; margin-top: 0.25rem;">--</p>
       </div>
-      <div class="text-right">
-        <span class="text-xs text-slate-400">対応ファイル状態</span>
-        <div class="text-xs text-emerald-400 font-mono mt-1">skills.js & monsters.js 読み込み完了</div>
+      <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem;">
+        <span style="font-size: 0.75rem; color: #34d399; font-family: monospace;">✓ 読み込み完了</span>
+        <button class="btn btn-amber" onclick="saveCurrentFavorite()">💾 この構成をお気に入り保存</button>
       </div>
     </div>
 
-    <!-- 4つのリールカード (★1〜★4) -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      
-      <!-- 各リールのテンプレート -->
-      <script>
-        // JSでリール1〜4を動的に生成します
-      </script>
-      <div id="reelsContainer" class="contents"></div>
-
-    </div>
-
+    <!-- 各リールを表示するコンテナ -->
+    <div id="reelsContainer" class="grid-reels"></div>
   </main>
 
-  <!-- 外部データの読み込み (必ずこの順番で読み込みます) -->
+  <!-- お気に入り保存・並び替え用モーダル画面 -->
+  <div id="favoritesModal" class="modal-overlay" onclick="closeFavoritesModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h3 style="font-weight: bold; color: #fbbf24;">⭐ お気に入り保存されたコマンド構成</h3>
+        
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <select id="sortOrder" onchange="renderFavoritesList()" style="font-size: 0.75rem; padding: 0.25rem 0.5rem;">
+            <option value="newest">新しい順</option>
+            <option value="oldest">古い順</option>
+            <option value="name">モンスター名順</option>
+            <option value="chapter">章順</option>
+          </select>
+          <button class="btn" onclick="closeFavoritesModal()">✕ 閉じる</button>
+        </div>
+
+      </div>
+      <div id="favoritesListBody" class="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- スクリプトの読み込み（技DB -> モンスターDB -> お気に入り処理） -->
   <script src="skills.js"></script>
   <script src="monsters.js"></script>
+  <script src="favorites.js"></script>
 
-  <!-- アプリメイン処理 -->
+  <!-- アプリ本体の制御スクリプト -->
   <script>
-    // 現在選択中のモンスターデータ・リール配置データ
+    let allMonstersList = [];
     let currentMonster = null;
-    let currentReels = [[], [], [], []]; // 4リール分 (各6枠)
+    let currentReels = [];
 
-    // 初期化処理
     window.addEventListener('DOMContentLoaded', () => {
-      lucide.createIcons();
-      initMonsterSelect();
+      initApp();
     });
 
-    // モンスター選択肢の初期化
-    function initMonsterSelect() {
-      const select = document.getElementById('monsterSelect');
-      select.innerHTML = '';
-
-      if (typeof MONSTERS === 'undefined' || !MONSTERS.length) {
-        select.innerHTML = '<option value="">monsters.js が読み込めません</option>';
+    /**
+     * アプリ初期化処理
+     * オブジェクト/配列構造の両方の MONSTERS に対応して平坦化・章リストの生成を行う
+     */
+    function initApp() {
+      allMonstersList = [];
+      if (typeof MONSTERS === 'undefined') {
+        alert('monsters.js が読み込めませんでした。');
         return;
       }
 
-      MONSTERS.forEach((m, index) => {
+      if (Array.isArray(MONSTERS)) {
+        allMonstersList = MONSTERS;
+      } else {
+        // オブジェクト形式 { "序章": [...], "第1章": [...] } からフラットな配列を作成
+        Object.keys(MONSTERS).forEach(chapterKey => {
+          const list = MONSTERS[chapterKey];
+          if (Array.isArray(list)) {
+            list.forEach(m => {
+              allMonstersList.push({
+                ...m,
+                chapter: m.chapter || chapterKey
+              });
+            });
+          }
+        });
+      }
+
+      // 章プルダウンの生成
+      const chapterSelect = document.getElementById('chapterSelect');
+      chapterSelect.innerHTML = '';
+
+      const chapters = Array.isArray(MONSTERS) 
+        ? [...new Set(allMonstersList.map(m => m.chapter || '共通'))]
+        : Object.keys(MONSTERS);
+
+      chapters.forEach(ch => {
         const option = document.createElement('option');
-        option.value = m.id;
-        option.textContent = m.name;
-        select.appendChild(option);
+        option.value = ch;
+        option.textContent = ch;
+        chapterSelect.appendChild(option);
       });
 
-      // 最初のモンスターを選択
-      selectMonster(MONSTERS[0].id);
+      if (chapters.length > 0) {
+        onChapterChange(chapters[0]);
+      }
     }
 
-    // モンスターの切り替え
-    function selectMonster(monsterId) {
-      currentMonster = MONSTERS.find(m => m.id === monsterId);
+    /**
+     * 章が切り替わった際のモンスター選択プルダウンの更新
+     */
+    function onChapterChange(selectedChapter) {
+      const monsterSelect = document.getElementById('monsterSelect');
+      monsterSelect.innerHTML = '';
+
+      const filtered = allMonstersList.filter(m => (m.chapter || '共通') === selectedChapter);
+
+      if (filtered.length === 0) {
+        const option = document.createElement('option');
+        option.value = '';
+        option.textContent = '該当モンスターなし';
+        monsterSelect.appendChild(option);
+        return;
+      }
+
+      filtered.forEach(m => {
+        const option = document.createElement('option');
+        option.value = m.id;
+        option.textContent = `[★${m.rarity || '?'}] ${m.name} (${m.id})`;
+        monsterSelect.appendChild(option);
+      });
+
+      selectMonster(filtered[0].id);
+    }
+
+    /**
+     * モンスターの選択および画面全体の描画更新
+     */
+    function selectMonster(monsterId, customReels = null) {
+      currentMonster = allMonstersList.find(m => m.id === monsterId);
       if (!currentMonster) return;
 
-      document.getElementById('monsterName').textContent = currentMonster.name;
+      const chapterSelect = document.getElementById('chapterSelect');
+      if (chapterSelect.value !== currentMonster.chapter) {
+        chapterSelect.value = currentMonster.chapter;
+        updateMonsterSelectOptions(currentMonster.chapter, currentMonster.id);
+      } else {
+        document.getElementById('monsterSelect').value = currentMonster.id;
+      }
 
-      // 初期配置リールのセット (無ければ空枠で埋める)
-      currentReels = [0, 1, 2, 3].map(reelIdx => {
-        const initial = currentMonster.initialReels ? currentMonster.initialReels[reelIdx] : [];
+      document.getElementById('monsterName').textContent = currentMonster.name || '--';
+      document.getElementById('monsterIdBadge').textContent = `ID: ${currentMonster.id || '--'}`;
+      document.getElementById('monsterChapter').textContent = currentMonster.chapter || '章不明';
+      document.getElementById('monsterAttribute').textContent = `属性: ${currentMonster.attribute || '不明'}`;
+      document.getElementById('monsterRace').textContent = `種族: ${currentMonster.race || '不明'}`;
+      
+      const stats = currentMonster.stats || {};
+      document.getElementById('monsterStats').textContent = `HP: ${stats.hp || '???'} | 攻撃: ${stats.attack || '???'} | スピード: ${stats.speed || '???'}`;
+      document.getElementById('monsterExSkill').textContent = `EX技: ${currentMonster.exSkill || '???'}`;
+
+      const reelCount = (currentMonster.maxCapacity && currentMonster.maxCapacity.length) 
+        ? currentMonster.maxCapacity.length 
+        : (currentMonster.rarity || 1);
+
+      currentReels = [];
+      for (let reelIdx = 0; reelIdx < reelCount; reelIdx++) {
+        const sourceSlot = customReels && customReels[reelIdx] 
+          ? customReels[reelIdx] 
+          : (currentMonster.initialReels && currentMonster.initialReels[reelIdx] ? currentMonster.initialReels[reelIdx] : []);
+        
         const reel = [];
         for (let slotIdx = 0; slotIdx < 6; slotIdx++) {
-          reel.push(initial[slotIdx] || 'miss');
+          const rawId = sourceSlot[slotIdx];
+          reel.push(rawId !== undefined && rawId !== null ? rawId : 3);
         }
-        return reel;
-      });
+        currentReels.push(reel);
+      }
 
       renderReels();
     }
 
-    // 覚える技のプルダウン選択肢（<option>）を生成
-    function generateSkillOptions(selectedSkillId) {
-      if (typeof SKILLS === 'undefined') return '';
+    function updateMonsterSelectOptions(chapter, activeId) {
+      const monsterSelect = document.getElementById('monsterSelect');
+      monsterSelect.innerHTML = '';
+      const filtered = allMonstersList.filter(m => (m.chapter || '共通') === chapter);
+      filtered.forEach(m => {
+        const option = document.createElement('option');
+        option.value = m.id;
+        option.textContent = `[★${m.rarity || '?'}] ${m.name} (${m.id})`;
+        if (m.id === activeId) option.selected = true;
+        monsterSelect.appendChild(option);
+      });
+    }
 
-      const availableIds = currentMonster.availableSkillIds || Object.keys(SKILLS);
+    function getColorLabel(colorCode) {
+      switch (colorCode) {
+        case 'オ': return '🟧 [オ]';
+        case '砂': return '⬜ [砂]';
+        case '銅': return '🟫 [銅]';
+        case '銀': return '⬜ [銀]';
+        case '金': return '🟨 [金]';
+        default:   return `[${colorCode || '無'}]`;
+      }
+    }
+
+    /**
+     * リールスロット内のセレクトボックス用技選択肢 HTML 生成
+     * 技の Type（物理・魔法等）を含めてレンダリング
+     */
+    function generateSkillOptions(selectedSkillId) {
+      if (typeof SKILLS === 'undefined') return '<option value="3">ミス (コスト:0)</option>';
+
+      let availableIds = currentMonster.availableSkillIds;
+      if (!availableIds || availableIds.length === 0) {
+        availableIds = Object.keys(SKILLS);
+      }
+
+      if (selectedSkillId !== undefined && selectedSkillId !== null && !availableIds.includes(selectedSkillId)) {
+        availableIds = [selectedSkillId, ...availableIds];
+      }
+
       return availableIds.map(id => {
         const skill = SKILLS[id];
-        if (!skill) return '';
-        const selected = (id === selectedSkillId) ? 'selected' : '';
-        return `<option value="${id}" ${selected}>${skill.name} (コスト:${skill.cost})</option>`;
+        if (!skill) {
+          const isSelected = (id == selectedSkillId) ? 'selected' : '';
+          return `<option value="${id}" ${isSelected}>技ID:${id} (未定義)</option>`;
+        }
+        const selected = (id == selectedSkillId) ? 'selected' : '';
+        const colorLabel = getColorLabel(skill.color);
+        const typeLabel = skill.type ? `[${skill.type}] ` : ''; // 技のType情報を追加
+        return `<option value="${id}" ${selected}>${colorLabel} ${typeLabel}${skill.name} (コスト:${skill.cost})</option>`;
       }).join('');
     }
 
-    // リール画面の描画
+    /**
+     * リールごとのキャパシティ計算および UI 描画
+     */
     function renderReels() {
       const container = document.getElementById('reelsContainer');
       container.innerHTML = '';
 
+      if (!currentMonster || currentReels.length === 0) {
+        container.innerHTML = '<p style="color: #94a3b8; grid-column: span 4; text-align: center;">モンスターデータが見つかりません。</p>';
+        return;
+      }
+
       currentReels.forEach((reelSkills, reelIdx) => {
-        const maxCap = currentMonster.maxCapacity[reelIdx] || 0;
-        
-        // 使用中キャパシティの計算
+        const maxCap = (currentMonster.maxCapacity && currentMonster.maxCapacity[reelIdx] !== undefined) 
+          ? currentMonster.maxCapacity[reelIdx] 
+          : 0;
+
         let usedCap = 0;
         reelSkills.forEach(skillId => {
-          if (SKILLS[skillId]) {
+          if (SKILLS && SKILLS[skillId]) {
             usedCap += SKILLS[skillId].cost;
           }
         });
 
         const usagePercent = maxCap > 0 ? Math.min(100, (usedCap / maxCap) * 100) : 0;
-        const isOver = usedCap > maxCap;
+        const isOver = maxCap > 0 && usedCap > maxCap;
 
-        // リールカードのHTML
         const reelCard = document.createElement('div');
-        reelCard.className = 'glass-card rounded-2xl p-5 flex flex-col justify-between';
-        
+        reelCard.className = 'glass-card';
+
         let slotsHtml = '';
         for (let slotIdx = 0; slotIdx < 6; slotIdx++) {
           const currentSkillId = reelSkills[slotIdx];
+          const skill = SKILLS ? SKILLS[currentSkillId] : null;
+          const skillColor = skill ? (skill.color === 'オ' ? 'オレンジ' : skill.color) : '砂';
+
           slotsHtml += `
-            <div class="flex items-center gap-2">
-              <span class="text-xs font-mono text-slate-500 w-4">${slotIdx + 1}</span>
-              <select onchange="updateSlot(${reelIdx}, ${slotIdx}, this.value)" class="bg-slate-900 border border-slate-700/80 text-slate-200 text-xs rounded-lg px-2.5 py-2 w-full focus:ring-1 focus:ring-amber-500 outline-none">
+            <div class="slot-item">
+              <span class="slot-num">${slotIdx + 1}</span>
+              <select class="slot-select color-${skillColor}" onchange="updateSlot(${reelIdx}, ${slotIdx}, this.value)">
                 ${generateSkillOptions(currentSkillId)}
               </select>
             </div>
@@ -174,23 +320,18 @@
 
         reelCard.innerHTML = `
           <div>
-            <div class="flex justify-between items-center mb-3">
-              <h3 class="font-bold text-amber-400 flex items-center gap-1.5">
-                <span>★${reelIdx + 1}</span>
-                <span class="text-xs text-slate-400 font-normal">リール</span>
-              </h3>
-              <span class="text-xs font-mono px-2 py-0.5 rounded ${isOver ? 'bg-rose-500/20 text-rose-400 border border-rose-500/30' : 'bg-slate-800 text-slate-300'}">
-                ${usedCap.toFixed(1)} / ${maxCap.toFixed(1)}
+            <div class="reel-header">
+              <span class="reel-title">★${reelIdx + 1} <span style="font-size: 0.75rem; color: #94a3b8; font-weight: normal;">リール</span></span>
+              <span class="cap-badge ${isOver ? 'over' : ''}">
+                ${usedCap.toFixed(1)} / ${maxCap > 0 ? maxCap.toFixed(1) : '未設定'}
               </span>
             </div>
 
-            <!-- キャパシティメーター -->
-            <div class="w-full bg-slate-900 rounded-full h-2 mb-4 overflow-hidden border border-slate-800">
-              <div class="h-full rounded-full transition-all duration-300 ${isOver ? 'bg-rose-500' : 'bg-amber-400'}" style="width: ${usagePercent}%"></div>
+            <div class="meter-bg">
+              <div class="meter-fill ${isOver ? 'over' : ''}" style="width: ${maxCap > 0 ? usagePercent : 0}%"></div>
             </div>
 
-            <!-- 6つのスロット -->
-            <div class="space-y-2">
+            <div class="slot-list">
               ${slotsHtml}
             </div>
           </div>
@@ -198,13 +339,11 @@
 
         container.appendChild(reelCard);
       });
-
-      lucide.createIcons();
     }
 
-    // スロットの技が変更されたとき
     function updateSlot(reelIdx, slotIdx, newSkillId) {
-      currentReels[reelIdx][slotIdx] = newSkillId;
+      const parsedId = isNaN(Number(newSkillId)) ? newSkillId : Number(newSkillId);
+      currentReels[reelIdx][slotIdx] = parsedId;
       renderReels();
     }
   </script>

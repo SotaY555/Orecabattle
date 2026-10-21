@@ -1,32 +1,760 @@
-const MONSTERS = [
-  {
-    id: "red_dragon",
-    name: "レッドドラゴン",
-    maxCapacity: [12.0, 14.0, 16.0, 18.0], // ★1〜★4のキャパ容量
-    availableSkillIds: [
-      "miss", "kougeki", "kougeki_p", "move_1_2", "move_2_3", "move_3_4", "hi_no_iki"
-    ],
-    // 初期配置 (各リール6枠の技ID)
-    initialReels: [
-      ["kougeki", "kougeki", "hi_no_iki", "miss", "move_1_2", "kougeki_p"],
-      ["kougeki", "kougeki_p", "move_2_3", "miss", "hi_no_iki", "kougeki_p"],
-      ["kougeki_p", "move_3_4", "miss", "hi_no_iki", "kougeki_p", "kougeki"],
-      ["kougeki_p", "hi_no_iki", "kougeki_p", "miss", "kougeki_p", "hi_no_iki"]
-    ]
-  },
-  {
-    id: "reonale",
-    name: "魔王レオナーレ",
-    maxCapacity: [16.8, 21.0, 24.6, 28.8], // ★1〜★4のキャパ容量
-    availableSkillIds: [
-      "miss", "kougeki", "kougeki_p", "tameru", "move_1_2", "move_2_3", "move_3_4", "juudentyu", "maounoichigeki", "daikoushin", "mee"
-    ],
-    // 初期配置 (各リール6枠の技ID)
-    initialReels: [
-      ["kougeki", "move_1_2", "move_1_2", "move_1_2", "move_1_2", "move_1_2"],
-      ["kougeki", "move_2_3", "move_2_3", "move_2_3", "move_2_3", "move_2_3"],
-      ["kougeki_p", "kougeki_p", "move_3_4", "move_3_4", "move_3_4", "move_3_4"],
-      ["juudentyu", "daikoushin", "daikoushin", "daikoushin", "daikoushin", "daikoushin"]
-    ]
-  }
-];
+// オレカバトル2 モンスターデータベース（章別オブジェクト階層構造）
+const MONSTERS = {
+  "序章": [
+    {
+      id: "OBS00-001",
+      name: "トロル",
+      rarity: 1,
+      attribute: "土",
+      race: "幻獣",
+      stats: { hp: "42-44", attack: "25-26", speed: "12-13" },
+      exSkill: "宝石つぶて→宝石みだれうち",
+      maxCapacity: [14],
+      initialReels: [
+        [3 /* ミス (コスト:0) */, 11 /* こうげき (コスト:1) */, 41 /* こうげき! (コスト:2) */, 18 /* EXゲージ+1 (コスト:1) */, 48 /* EXゲージ+2 (コスト:2) */, 88 /* 宝石弾 (コスト:2.6) */]
+      ],
+      availableSkillIds: [3, 11, 18, 41, 48, 88, 124]
+    },
+    {
+      id: "OBS00-002",
+      name: "ジバクガエル",
+      rarity: 1,
+      attribute: "風",
+      race: "水族",
+      stats: { hp: "33-35", attack: "21-22", speed: "8" },
+      exSkill: "自爆!! → 自爆!!!",
+      maxCapacity: [14.6],
+      initialReels: [
+        [3 /* ミス (コスト:0) */, 11 /* こうげき (コスト:1) */, 11 /* こうげき (コスト:1) */, 41 /* こうげき! (コスト:2) */, 90 /* 自爆 (コスト:2.6) */, 514 /* とっこう (コスト:6) */]
+      ],
+      availableSkillIds: [3, 11, 41, 90, 514]
+    },
+    {
+      id: "OBS00-003",
+      name: "赤のプリンセス",
+      rarity: 1,
+      attribute: "水",
+      race: "獣",
+      stats: { hp: "42-44", attack: "21-22", speed: "38-40" },
+      exSkill: "プリンセスの命令 → 王女の命令",
+      maxCapacity: [9],
+      initialReels: [
+        [3 /* ミス (コスト:0) */, 11 /* こうげき (コスト:1) */, 11 /* こうげき (コスト:1) */, 41 /* こうげき! (コスト:2) */, 259 /* 会心の一撃 (コスト:4) */, 16 /* プリンセスのおうえん (コスト:1) */]
+      ],
+      availableSkillIds: [3, 11, 16, 41, 259]
+    },
+    {
+      id: "OBS00-004",
+      name: "赤の王女",
+      rarity: 2,
+      attribute: "水",
+      race: "獣",
+      stats: { hp: "84-89", attack: "35-37", speed: "50-53" },
+      exSkill: "王女の命令 → 女王の命令",
+      maxCapacity: [12, 12],
+      initialReels: [
+        [3 /* ミス (コスト:0) */, 11 /* こうげき (コスト:1) */, 11 /* こうげき (コスト:1) */, 41 /* こうげき! (コスト:2) */, 259 /* 会心の一撃 (コスト:4) */, 16 /* プリンセスのおうえん (コスト:1) */],
+        [3 /* ミス (コスト:0) */, 41 /* こうげき! (コスト:2) */, 16 /* プリンセスのおうえん (コスト:1) */, 16 /* プリンセスのおうえん (コスト:1) */, 16 /* プリンセスのおうえん (コスト:1) */, 47 /* 王女のせいえん (コスト:2) */]
+      ],
+      availableSkillIds: [3, 11, 16, 41, 47, 104, 259]
+    },
+    {
+      id: "OBS00-005",
+      name: "赤の女王",
+      rarity: 3,
+      attribute: "水",
+      race: "獣",
+      stats: { hp: "152-161", attack: "42-44", speed: "59-62" },
+      exSkill: "女王の命令 → 女王の絶対命令",
+      maxCapacity: [12, 14, 21],
+      initialReels: [
+        [3 /* ミス (コスト:0) */, 11 /* こうげき (コスト:1) */, 11 /* こうげき (コスト:1) */, 41 /* こうげき! (コスト:2) */, 259 /* 会心の一撃 (コスト:4) */, 16 /* プリンセスのおうえん (コスト:1) */],
+        [3 /* ミス (コスト:0) */, 41 /* こうげき! (コスト:2) */, 16 /* プリンセスのおうえん (コスト:1) */, 16 /* プリンセスのおうえん (コスト:1) */, 16 /* プリンセスのおうえん (コスト:1) */, 47 /* 王女のせいえん (コスト:2) */],
+        [1 /* ★★★→★ (コスト:-1.2) */, 47 /* 王女のせいえん (コスト:2) */, 47 /* 王女のせいえん (コスト:2) */, 288 /* EXゲージ+4 (コスト:4) */, 153 /* 召喚★★ (コスト:3.2) */, 123 /* 女王のごほうび (コスト:3) */]
+      ],
+      availableSkillIds: [1, 3, 11, 16, 41, 47, 104, 123, 153, 258, 259, 288]
+    },
+    {
+      id: "OBS00-006",
+      name: "ガルル",
+      rarity: 1,
+      attribute: "火",
+      race: "獣",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12],
+      initialReels: [[]],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-007",
+      name: "雪狼ガルム",
+      rarity: 3,
+      attribute: "水",
+      race: "獣",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18],
+      initialReels: [[], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-008",
+      name: "プチクラブ",
+      rarity: 1,
+      attribute: "水",
+      race: "水族",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12],
+      initialReels: [[]],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-009",
+      name: "カニクラブ",
+      rarity: 4,
+      attribute: "水",
+      race: "水族",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18, 21],
+      initialReels: [[], [], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-010",
+      name: "スライム",
+      rarity: 1,
+      attribute: "水",
+      race: "スライム",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12],
+      initialReels: [[]],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-011",
+      name: "スライム・ドラゴン",
+      rarity: 1,
+      attribute: "火",
+      race: "スライム",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12],
+      initialReels: [[]],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-012",
+      name: "スライム・シルバー",
+      rarity: 2,
+      attribute: "風",
+      race: "スライム",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15],
+      initialReels: [[], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-013",
+      name: "スライム・ゴールド",
+      rarity: 3,
+      attribute: "土",
+      race: "スライム",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18],
+      initialReels: [[], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-014",
+      name: "スライム・マナ",
+      rarity: 4,
+      attribute: "火",
+      race: "スライム",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18, 21],
+      initialReels: [[], [], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-015",
+      name: "プチドラゴン",
+      rarity: 1,
+      attribute: "火",
+      race: "ドラゴン",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12],
+      initialReels: [[]],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-016",
+      name: "レッドゴン",
+      rarity: 2,
+      attribute: "火",
+      race: "ドラゴン",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15],
+      initialReels: [[], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-017",
+      name: "レッドラゴ",
+      rarity: 3,
+      attribute: "火",
+      race: "ドラゴン",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18],
+      initialReels: [[], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-018",
+      name: "レッドドラゴン",
+      rarity: 4,
+      attribute: "火",
+      race: "ドラゴン",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18, 21],
+      initialReels: [[], [], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-019",
+      name: "戦士スタン",
+      rarity: 2,
+      attribute: "火",
+      race: "戦士",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15],
+      initialReels: [[], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-020",
+      name: "赤騎士スタン",
+      rarity: 3,
+      attribute: "火",
+      race: "戦士",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18],
+      initialReels: [[], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-021",
+      name: "魔法使いマナナ",
+      rarity: 2,
+      attribute: "風",
+      race: "魔法使い",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15],
+      initialReels: [[], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-022",
+      name: "魔導師マナナール",
+      rarity: 3,
+      attribute: "風",
+      race: "魔法使い",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18],
+      initialReels: [[], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-023",
+      name: "ボット02",
+      rarity: 2,
+      attribute: "土",
+      race: "機械",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15],
+      initialReels: [[], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-024",
+      name: "ボット03",
+      rarity: 3,
+      attribute: "土",
+      race: "機械",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18],
+      initialReels: [[], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-025",
+      name: "剣士グレン",
+      rarity: 2,
+      attribute: "水",
+      race: "戦士",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15],
+      initialReels: [[], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-026",
+      name: "霧の剣士グレン",
+      rarity: 3,
+      attribute: "水",
+      race: "戦士",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18],
+      initialReels: [[], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-027",
+      name: "騎士アリア",
+      rarity: 2,
+      attribute: "水",
+      race: "戦士",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15],
+      initialReels: [[], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-028",
+      name: "親衛騎士アリア",
+      rarity: 3,
+      attribute: "水",
+      race: "戦士",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18],
+      initialReels: [[], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-029",
+      name: "ラクシャーサ",
+      rarity: 2,
+      attribute: "土",
+      race: "戦士",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15],
+      initialReels: [[], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-030",
+      name: "狂戦士ラクシャーサ",
+      rarity: 3,
+      attribute: "土",
+      race: "戦士",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18],
+      initialReels: [[], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-031",
+      name: "悪鬼ラクシャーサ",
+      rarity: 4,
+      attribute: "土",
+      race: "戦士",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18, 21],
+      initialReels: [[], [], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-032",
+      name: "ドーシュ",
+      rarity: 2,
+      attribute: "風",
+      race: "戦士",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15],
+      initialReels: [[], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-033",
+      name: "弩使いドーシュ",
+      rarity: 3,
+      attribute: "風",
+      race: "戦士",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18],
+      initialReels: [[], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-034",
+      name: "怒涛の弩手ドーシュ",
+      rarity: 4,
+      attribute: "風",
+      race: "戦士",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18, 21],
+      initialReels: [[], [], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-035",
+      name: "ゼノゴン",
+      rarity: 2,
+      attribute: "特殊",
+      race: "ドラゴン",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15],
+      initialReels: [[], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-036",
+      name: "ゼノドラン",
+      rarity: 3,
+      attribute: "特殊",
+      race: "ドラゴン",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18],
+      initialReels: [[], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-037",
+      name: "我竜ゼノドラゴン",
+      rarity: 4,
+      attribute: "特殊",
+      race: "ドラゴン",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18, 21],
+      initialReels: [[], [], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-038",
+      name: "炎の召喚士ヒート",
+      rarity: 2,
+      attribute: "火",
+      race: "召喚士",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15],
+      initialReels: [[], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-039",
+      name: "火炎召喚士ヒート",
+      rarity: 3,
+      attribute: "火",
+      race: "召喚士",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18],
+      initialReels: [[], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-040",
+      name: "炎情召喚師ヒート",
+      rarity: 4,
+      attribute: "火",
+      race: "召喚士",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18, 21],
+      initialReels: [[], [], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-041",
+      name: "呪師テングリ",
+      rarity: 3,
+      attribute: "土",
+      race: "召喚士",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18],
+      initialReels: [[], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-042",
+      name: "魔獣クイックシルバー",
+      rarity: 3,
+      attribute: "風",
+      race: "幻獣",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18],
+      initialReels: [[], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-043",
+      name: "魔姫カーリィ",
+      rarity: 4,
+      attribute: "火",
+      race: "悪魔",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18, 21],
+      initialReels: [[], [], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-044",
+      name: "魔王バスカー",
+      rarity: 4,
+      attribute: "火",
+      race: "悪魔",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18, 21],
+      initialReels: [[], [], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-045",
+      name: "ベヒ",
+      rarity: 1,
+      attribute: "土",
+      race: "ドラゴン",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12],
+      initialReels: [[]],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-046",
+      name: "ベヒモ",
+      rarity: 2,
+      attribute: "土",
+      race: "ドラゴン",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15],
+      initialReels: [[], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-047",
+      name: "ベヒモス",
+      rarity: 3,
+      attribute: "土",
+      race: "ドラゴン",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18],
+      initialReels: [[], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-048",
+      name: "重竜ベヒモス",
+      rarity: 4,
+      attribute: "土",
+      race: "ドラゴン",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18, 21],
+      initialReels: [[], [], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-049",
+      name: "ランスロット",
+      rarity: 2,
+      attribute: "水",
+      race: "戦士",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15],
+      initialReels: [[], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-050",
+      name: "湖の騎士ランスロット",
+      rarity: 3,
+      attribute: "水",
+      race: "戦士",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18],
+      initialReels: [[], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-051",
+      name: "白の女王",
+      rarity: 3,
+      attribute: "水",
+      race: "獣",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18],
+      initialReels: [[], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-052",
+      name: "霧雨の将グレン",
+      rarity: 4,
+      attribute: "水",
+      race: "戦士",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18, 21],
+      initialReels: [[], [], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-053",
+      name: "ツインビー",
+      rarity: 1,
+      attribute: "風",
+      race: "機械",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12],
+      initialReels: [[]],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-054",
+      name: "プロトタイプ Twin-Bee",
+      rarity: 4,
+      attribute: "風",
+      race: "機械",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18, 21],
+      initialReels: [[], [], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-055",
+      name: "黒戦士スタン",
+      rarity: 2,
+      attribute: "火",
+      race: "戦士",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15],
+      initialReels: [[], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-056",
+      name: "黒紅騎士スタン",
+      rarity: 3,
+      attribute: "火",
+      race: "戦士",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18],
+      initialReels: [[], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-057",
+      name: "紅蓮の騎士スタン",
+      rarity: 4,
+      attribute: "火",
+      race: "戦士",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18, 21],
+      initialReels: [[], [], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-058",
+      name: "魔獣ギリメ",
+      rarity: 3,
+      attribute: "風",
+      race: "幻獣",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18],
+      initialReels: [[], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-059",
+      name: "魔王ムウス",
+      rarity: 4,
+      attribute: "火",
+      race: "悪魔",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18, 21],
+      initialReels: [[], [], [], []],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS00-060",
+      name: "邪神バスカー",
+      rarity: 4,
+      attribute: "火",
+      race: "悪魔",
+      stats: { hp: "???", attack: "???", speed: "???" },
+      exSkill: "???",
+      maxCapacity: [12, 15, 18, 21],
+      initialReels: [[], [], [], []],
+      availableSkillIds: []
+    }
+  ],
+  "第1章": [
+    /* 参照元URLが利用可能になった際にここに第1章モンスターを追加可能 */
+  ],
+  "外伝": [
+    {
+      id: "OBSSP-012",
+      name: "魔王レオナーレ",
+      rarity: 4,
+      attribute: "風",
+      race: "悪魔",
+      stats: { hp: "277-293", attack: "71-75", speed: "62-66" },
+      exSkill: "デュア・リズム→DUA・RHYTHM",
+      maxCapacity: [16.8, 21, 24.6, 28.8],
+      initialReels: [
+        [4 /* ほほえんでいる (コスト:0) */, 11 /* こうげき (コスト:1) */, 41 /* こうげき! (コスト:2) */, 104 /* ★→★★ (コスト:3) */, 104 /* ★→★★ (コスト:3) */, 247 /* メェ (コスト:3.6) */],
+        [4 /* ほほえんでいる (コスト:0) */, 41 /* こうげき! (コスト:2) */, 87 /* 銃電中 (コスト:2.4) */, 87 /* 銃電中 (コスト:2.4) */, 258 /* ★★→★★★ (コスト:4) */, 247 /* メェ (コスト:3.6) */],
+        [11 /* こうげき (コスト:1) */, 247 /* メェ (コスト:3.6) */, 247 /* メェ (コスト:3.6) */, 87 /* 銃電中 (コスト:2.4) */, 408 /* ★★★→★★★★ (コスト:5) */, 378 /* 魔王の一撃 (コスト:4.8) */],
+        [41 /* こうげき! (コスト:2) */, 247 /* メェ (コスト:3.6) */, 247 /* メェ (コスト:3.6) */, 482 /* 大行侵 (コスト:5.2) */, 482 /* 大行侵 (コスト:5.2) */, 378 /* 魔王の一撃 (コスト:4.8) */]
+      ],
+      availableSkillIds: [4, 11, 22, 29, 38, 41, 87, 104, 247, 258, 378, 408, 482]
+    }
+  ]
+};

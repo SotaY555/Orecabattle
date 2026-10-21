@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>モンスターデータ編集 - オレカバトル2</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 編集画面専用の補助レイアウト・スタイル */
+    .admin-container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.875rem;
+      color: #cbd5e1;
+      margin-bottom: 0.25rem;
+      font-weight: 600;
+    }
+    .form-control {
+      width: 100%;
+      background: #0f172a;
+      border: 1px solid #334155;
+      color: #f8fafc;
+      padding: 0.5rem 0.75rem;
+      border-radius: 0.5rem;
+      font-size: 0.875rem;
+    }
+    .form-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .reel-edit-card {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    .skill-checkbox-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0.5rem;
+      max-height: 250px;
+      overflow-y: auto;
+      background: #0f172a;
+      border: 1px solid #334155;
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+    }
+    .skill-checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+    }
+    .slot-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .slot-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .slot-num {
+      font-family: monospace;
+      font-size: 0.75rem;
+      color: #64748b;
+      width: 1rem;
+      text-align: right;
+    }
+    textarea.code-output {
+      width: 100%;
+      height: 300px;
+      background: #090d16;
+      color: #34d399;
+      font-family: monospace;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid #334155;
+      font-size: 0.8rem;
+      white-space: pre;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 編集画面用ヘッダー -->
+  <header>
+    <div class="header-container">
+      <div class="title-group">
+        <div class="title-icon">🛠️</div>
+        <div>
+          <h1 style="font-size: 1.125rem; font-weight: bold;">モンスターデータ 編集者ページ</h1>
+          <p style="font-size: 0.75rem; color: #94a3b8;">不明データの補完・monsters.js の出力</p>
+        </div>
+      </div>
+      <div>
+        <a href="index.html" class="btn btn-amber" style="text-decoration: none;">← シミュレーターに戻る</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="admin-container">
+    
+    <!-- モンスター選択エリア -->
+    <div class="glass-card" style="margin-bottom: 1.5rem;">
+      <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+        <label style="font-weight: bold; color: #fbbf24;">編集するモンスター:</label>
+        <select id="editMonsterSelect" onchange="loadSelectedMonsterForEdit()" style="min-width: 300px;" class="form-control"></select>
+      </div>
+    </div>
+
+    <!-- 編集メインフォーム -->
+    <div class="glass-card" style="margin-bottom: 1.5rem;">
+      
+      <!-- 1. 基本情報・ステータスフォーム -->
+      <h3 style="color: #fbbf24; border-bottom: 1px solid #334155; padding-bottom: 0.5rem; margin-bottom: 1rem;">基本情報・ステータス</h3>
+      
+      <div class="form-grid-3">
+        <div class="form-group">
+          <label>ID (変更不可)</label>
+          <input type="text" id="m_id" class="form-control" readonly style="background: #1e293b; color: #94a3b8;">
+        </div>
+        <div class="form-group">
+          <label>モンスター名</label>
+          <input type="text" id="m_name" class="form-control" placeholder="例: トロル">
+        </div>
+        <div class="form-group">
+          <label>章名（例: 序章, 第1章, 外伝）</label>
+          <input type="text" id="m_chapter" class="form-control" placeholder="例: 序章">
+        </div>
+        <div class="form-group">
+          <label>クラス（★数: 1〜4）</label>
+          <input type="number" id="m_rarity" class="form-control" min="1" max="4" value="1" onchange="updateReelEditFields()">
+        </div>
+        <div class="form-group">
+          <label>属性</label>
+          <select id="m_attribute" class="form-control">
+            <option value="火">火</option>
+            <option value="水">水</option>
+            <option value="土">土</option>
+            <option value="風">風</option>
+            <option value="特殊">特殊</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>種族</label>
+          <input type="text" id="m_race" class="form-control" placeholder="例: 悪魔">
+        </div>
+      </div>
+
+      <div class="form-grid-3" style="margin-top: 1rem;">
+        <div class="form-group">
+          <label>HP (数値または ??? 等)</label>
+          <input type="text" id="m_hp" class="form-control" placeholder="例: 220 または ???">
+        </div>
+        <div class="form-group">
+          <label>攻撃力 (数値または ??? 等)</label>
+          <input type="text" id="m_attack" class="form-control" placeholder="例: 45 または ???">
+        </div>
+        <div class="form-group">
+          <label>スピード (数値または ??? 等)</label>
+          <input type="text" id="m_speed" class="form-control" placeholder="例: 15 または ???">
+        </div>
+      </div>
+
+      <div class="form-group" style="margin-top: 1rem;">
+        <label>EX技名</label>
+        <input type="text" id="m_exSkill" class="form-control" placeholder="例: トロルパンチ">
+      </div>
+
+      <!-- 2. 習得可能コマンド（覚える技のチェックボックス） -->
+      <h3 style="color: #fbbf24; border-bottom: 1px solid #334155; padding-bottom: 0.5rem; margin-top: 2rem; margin-bottom: 1rem;">習得可能コマンド（覚える技）</h3>
+      <p style="font-size: 0.75rem; color: #94a3b8; margin-bottom: 0.5rem;">ここでチェックを入れた技が、下の初期配置スロットの選択肢に表示されるようになります。</p>
+      <div id="skillsCheckGrid" class="skill-checkbox-grid"></div>
+
+      <!-- 3. リール別 最大キャパシティ & 初期配置設定 -->
+      <h3 style="color: #fbbf24; border-bottom: 1px solid #334155; padding-bottom: 0.5rem; margin-top: 2rem; margin-bottom: 1rem;">リール別 最大キャパシティ & 初期配置</h3>
+      <div id="reelsEditContainer"></div>
+
+      <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+        <button class="btn btn-amber" style="padding: 0.75rem 1.5rem; font-weight: bold;" onclick="saveMonsterToMemory()">💾 変更をデータに反映</button>
+      </div>
+    </div>
+
+    <!-- monsters.js 出力エリア（章別オブジェクトコード書き出し） -->
+    <div class="glass-card">
+      <h3 style="color: #fbbf24; margin-bottom: 0.5rem;">書き出し（monsters.js 用コード・章階層＆コメント付き）</h3>
+      <p style="font-size: 0.75rem; color: #94a3b8; margin-bottom: 1rem;">変更を加えた後、下のコードをコピーして `monsters.js` に上書き保存してください。</p>
+      <textarea id="outputCode" class="code-output" readonly></textarea>
+      <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+        <button class="btn btn-amber" onclick="copyOutputCode()">📋 コードをコピー</button>
+        <button class="btn" onclick="downloadMonstersFile()">📥 monsters.js としてダウンロード</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="skills.js"></script>
+  <script src="monsters.js"></script>
+  <script>
+    let localMonsters = [];
+    let currentEditingInitialReels = [];
+
+    window.addEventListener('DOMContentLoaded', () => {
+      initAdmin();
+    });
+
+    /**
+     * 編集ページの初期化
+     * MONSTERS がオブジェクト/配列いずれの形式でも取り込めるよう相互変換処理を実装
+     */
+    function initAdmin() {
+      localMonsters = [];
+      if (typeof MONSTERS !== 'undefined') {
+        if (Array.isArray(MONSTERS)) {
+          localMonsters = JSON.parse(JSON.stringify(MONSTERS));
+        } else {
+          // 章オブジェクト構造 { "序章": [...], ... } をフラットな作業用配列に展開
+          Object.keys(MONSTERS).forEach(ch => {
+            if (Array.isArray(MONSTERS[ch])) {
+              MONSTERS[ch].forEach(m => localMonsters.push({ ...m, chapter: m.chapter || ch }));
+            }
+          });
+        }
+      }
+
+      populateMonsterSelect();
+      renderSkillCheckboxes();
+      if (localMonsters.length > 0) {
+        loadMonsterToForm(localMonsters[0]);
+      }
+    }
+
+    function populateMonsterSelect() {
+      const select = document.getElementById('editMonsterSelect');
+      select.innerHTML = '';
+      localMonsters.forEach((m, idx) => {
+        const opt = document.createElement('option');
+        opt.value = idx;
+        opt.textContent = `[${m.chapter || '共通'}] [★${m.rarity || 1}] ${m.name} (${m.id})`;
+        select.appendChild(opt);
+      });
+    }
+
+    function renderSkillCheckboxes() {
+      const grid = document.getElementById('skillsCheckGrid');
+      grid.innerHTML = '';
+
+      if (typeof SKILLS === 'undefined') {
+        grid.innerHTML = '<p style="color:#94a3b8;">skills.js が読み込まれていません。</p>';
+        return;
+      }
+
+      Object.keys(SKILLS).forEach(sId => {
+        const skill = SKILLS[sId];
+        const label = document.createElement('label');
+        label.className = 'skill-checkbox-item';
+        label.innerHTML = `
+          <input type="checkbox" class="skill-chk" value="${sId}" onchange="onAvailableSkillsChange()">
+          <span>[${skill.color || '無'}] ${skill.name} (ID:${sId}, コスト:${skill.cost})</span>
+        `;
+        grid.appendChild(label);
+      });
+    }
+
+    function onAvailableSkillsChange() {
+      saveReelsFromDOM();
+      updateReelEditFields();
+    }
+
+    function loadMonsterToForm(m) {
+      document.getElementById('m_id').value = m.id || '';
+      document.getElementById('m_name').value = m.name || '';
+      document.getElementById('m_chapter').value = m.chapter || '序章';
+      document.getElementById('m_rarity').value = m.rarity || 1;
+      document.getElementById('m_attribute').value = m.attribute || '火';
+      document.getElementById('m_race').value = m.race || '';
+
+      const stats = m.stats || {};
+      document.getElementById('m_hp').value = stats.hp !== undefined ? stats.hp : '';
+      document.getElementById('m_attack').value = stats.attack !== undefined ? stats.attack : '';
+      document.getElementById('m_speed').value = stats.speed !== undefined ? stats.speed : '';
+      document.getElementById('m_exSkill').value = m.exSkill || '';
+
+      const available = m.availableSkillIds || [];
+      document.querySelectorAll('.skill-chk').forEach(chk => {
+        const val = isNaN(Number(chk.value)) ? chk.value : Number(chk.value);
+        chk.checked = available.includes(val);
+      });
+
+      currentEditingInitialReels = m.initialReels || [];
+      updateReelEditFields(m.maxCapacity);
+
+      generateOutputCode();
+    }
+
+    function loadSelectedMonsterForEdit() {
+      const idx = document.getElementById('editMonsterSelect').value;
+      if (localMonsters[idx]) {
+        loadMonsterToForm(localMonsters[idx]);
+      }
+    }
+
+    function saveReelsFromDOM() {
+      const rarity = parseInt(document.getElementById('m_rarity').value) || 1;
+      currentEditingInitialReels = [];
+      for (let r = 0; r < rarity; r++) {
+        currentEditingInitialReels.push([]);
+      }
+      document.querySelectorAll('.reel-slot-select').forEach(select => {
+        const r = parseInt(select.getAttribute('data-reel'));
+        const val = select.value;
+        const parsed = isNaN(Number(val)) ? val : Number(val);
+        if (currentEditingInitialReels[r]) {
+          currentEditingInitialReels[r].push(parsed);
+        }
+      });
+    }
+
+    function updateReelEditFields(maxCaps = []) {
+      const rarity = parseInt(document.getElementById('m_rarity').value) || 1;
+      const container = document.getElementById('reelsEditContainer');
+      
+      const checkedSkillIds = [];
+      document.querySelectorAll('.skill-chk:checked').forEach(chk => {
+        const v = chk.value;
+        checkedSkillIds.push(isNaN(Number(v)) ? v : Number(v));
+      });
+      if (!checkedSkillIds.includes(3) && !checkedSkillIds.includes("3")) {
+        checkedSkillIds.push(3);
+      }
+
+      let skillOptionsHtml = '';
+      if (typeof SKILLS !== 'undefined') {
+        checkedSkillIds.forEach(sId => {
+          const s = SKILLS[sId];
+          if (s) {
+            skillOptionsHtml += `<option value="${sId}">${s.name} (コスト:${s.cost}, [${s.color || '無'}])</option>`;
+          } else {
+            skillOptionsHtml += `<option value="${sId}">ID:${sId} (未定義)</option>`;
+          }
+        });
+      }
+      if (!skillOptionsHtml) {
+        skillOptionsHtml = '<option value="3">ミス (コスト:0)</option>';
+      }
+
+      container.innerHTML = '';
+
+      for (let r = 0; r < rarity; r++) {
+        const capVal = maxCaps[r] !== undefined ? maxCaps[r] : '';
+
+        const card = document.createElement('div');
+        card.className = 'reel-edit-card';
+
+        let slotListHtml = '';
+        for (let s = 0; s < 6; s++) {
+          slotListHtml += `
+            <div class="slot-item">
+              <span class="slot-num">${s + 1}</span>
+              <select class="form-control reel-slot-select" data-reel="${r}" data-slot="${s}" style="font-size: 0.75rem; padding: 0.4rem;" onchange="updateReelCapacitySum()">
+                ${skillOptionsHtml}
+              </select>
+            </div>
+          `;
+        }
+
+        card.innerHTML = `
+          <div style="display:flex; gap:1rem; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap; justify-content:space-between;">
+            <div style="display:flex; gap:1rem; align-items:center;">
+              <strong style="color:#fbbf24;">★${r+1} リール</strong>
+              <div style="display:flex; align-items:center; gap:0.5rem;">
+                <label style="font-size:0.8rem;">最大キャパシティ:</label>
+                <input type="number" step="0.1" class="form-control reel-cap-input" data-reel="${r}" value="${capVal}" style="width:100px;" oninput="updateReelCapacitySum()">
+              </div>
+            </div>
+            <div>
+              <span id="reelCapBadge-${r}" class="cap-badge">0.0 / 0.0</span>
+            </div>
+          </div>
+          <label style="font-size:0.75rem; color:#cbd5e1; display:block; margin-bottom:0.5rem;">初期配置スロット（上から1〜6段目）:</label>
+          <div class="slot-list">
+            ${slotListHtml}
+          </div>
+        `;
+        container.appendChild(card);
+      }
+
+      setTimeout(() => {
+        for (let r = 0; r < rarity; r++) {
+          const initSlots = currentEditingInitialReels[r] || [3,3,3,3,3,3];
+          for (let s = 0; s < 6; s++) {
+            const selectEl = document.querySelector(`.reel-slot-select[data-reel="${r}"][data-slot="${s}"]`);
+            if (selectEl && initSlots[s] !== undefined) {
+              selectEl.value = initSlots[s];
+            }
+          }
+        }
+        updateReelCapacitySum();
+      }, 0);
+    }
+
+    function updateReelCapacitySum() {
+      const rarity = parseInt(document.getElementById('m_rarity').value) || 1;
+      
+      for (let r = 0; r < rarity; r++) {
+        let usedCap = 0;
+        const selects = document.querySelectorAll(`.reel-slot-select[data-reel="${r}"]`);
+        selects.forEach(select => {
+          const skillId = select.value;
+          const parsedId = isNaN(Number(skillId)) ? skillId : Number(skillId);
+          if (typeof SKILLS !== 'undefined' && SKILLS[parsedId]) {
+            usedCap += SKILLS[parsedId].cost;
+          }
+        });
+
+        const capInput = document.querySelector(`.reel-cap-input[data-reel="${r}"]`);
+        const maxCap = capInput ? (parseFloat(capInput.value) || 0) : 0;
+
+        const badge = document.getElementById(`reelCapBadge-${r}`);
+        if (badge) {
+          const isOver = maxCap > 0 && usedCap > maxCap;
+          badge.textContent = `${usedCap.toFixed(1)} / ${maxCap > 0 ? maxCap.toFixed(1) : '未設定'}`;
+          badge.className = isOver ? 'cap-badge over' : 'cap-badge';
+        }
+      }
+    }
+
+    function saveMonsterToMemory() {
+      const idx = document.getElementById('editMonsterSelect').value;
+      if (!localMonsters[idx]) return;
+
+      let m = localMonsters[idx];
+
+      m.name = document.getElementById('m_name').value.trim();
+      m.chapter = document.getElementById('m_chapter').value.trim();
+      m.rarity = parseInt(document.getElementById('m_rarity').value) || 1;
+      m.attribute = document.getElementById('m_attribute').value;
+      m.race = document.getElementById('m_race').value.trim();
+
+      m.stats = {
+        hp: document.getElementById('m_hp').value.trim(),
+        attack: document.getElementById('m_attack').value.trim(),
+        speed: document.getElementById('m_speed').value.trim(),
+      };
+      m.exSkill = document.getElementById('m_exSkill').value.trim();
+
+      m.availableSkillIds = [];
+      document.querySelectorAll('.skill-chk:checked').forEach(chk => {
+        const v = chk.value;
+        m.availableSkillIds.push(isNaN(Number(v)) ? v : Number(v));
+      });
+
+      m.maxCapacity = [];
+      document.querySelectorAll('.reel-cap-input').forEach(input => {
+        m.maxCapacity.push(Number(input.value) || 0);
+      });
+
+      saveReelsFromDOM();
+      m.initialReels = currentEditingInitialReels;
+
+      populateMonsterSelect();
+      document.getElementById('editMonsterSelect').value = idx;
+      generateOutputCode();
+      alert(`「${m.name}」のデータを保存コードに反映しました！`);
+    }
+
+    /**
+     * 章ごとのオブジェクト階層構造で monsters.js のテキストコードを生成
+     */
+    function generateOutputCode() {
+      let grouped = {};
+      localMonsters.forEach(m => {
+        const ch = m.chapter || "序章";
+        if (!grouped[ch]) grouped[ch] = [];
+        grouped[ch].push(m);
+      });
+
+      let code = `// オレカバトル2 モンスターデータベース（章別オブジェクト階層構造）\nconst MONSTERS = {\n`;
+      
+      const chapters = Object.keys(grouped);
+      chapters.forEach((ch, chIdx) => {
+        code += `  ${JSON.stringify(ch)}: [\n`;
+        
+        grouped[ch].forEach((m, mIdx) => {
+          code += `    {\n`;
+          code += `      id: ${JSON.stringify(m.id)},\n`;
+          code += `      name: ${JSON.stringify(m.name)},\n`;
+          code += `      rarity: ${m.rarity},\n`;
+          code += `      attribute: ${JSON.stringify(m.attribute)},\n`;
+          code += `      race: ${JSON.stringify(m.race)},\n`;
+          code += `      stats: ${JSON.stringify(m.stats)},\n`;
+          code += `      exSkill: ${JSON.stringify(m.exSkill || '')},\n`;
+          code += `      maxCapacity: ${JSON.stringify(m.maxCapacity)},\n`;
+          
+          code += `      initialReels: [\n`;
+          if (m.initialReels) {
+            m.initialReels.forEach((reel, rIdx) => {
+              code += `        [`;
+              reel.forEach((skillId, sIdx) => {
+                let comment = '';
+                if (typeof SKILLS !== 'undefined' && SKILLS[skillId]) {
+                  const s = SKILLS[skillId];
+                  comment = ` /* ${s.name} (コスト:${s.cost}) */`;
+                } else {
+                  comment = ` /* 未定義 */`;
+                }
+                code += `${skillId}${comment}${sIdx < reel.length - 1 ? ', ' : ''}`;
+              });
+              code += `]${rIdx < m.initialReels.length - 1 ? ',' : ''}\n`;
+            });
+          }
+          code += `      ],\n`;
+
+          code += `      availableSkillIds: ${JSON.stringify(m.availableSkillIds || [])}\n`;
+          code += `    }${mIdx < grouped[ch].length - 1 ? ',' : ''}\n`;
+        });
+
+        code += `  ]${chIdx < chapters.length - 1 ? ',' : ''}\n`;
+      });
+
+      code += `};\n`;
+      document.getElementById('outputCode').value = code;
+    }
+
+    function copyOutputCode() {
+      const textarea = document.getElementById('outputCode');
+      textarea.select();
+      document.execCommand('copy');
+      alert('monsters.js 用コードをクリップボードにコピーしました！');
+    }
+
+    function downloadMonstersFile() {
+      const text = document.getElementById('outputCode').value;
+      const blob = new Blob([text], { type: 'text/javascript' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'monsters.js';
+      a.click();
+    }
+  </script>
+</body>
+</html>

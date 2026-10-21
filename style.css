@@ -1,0 +1,319 @@
+/* ==========================================================================
+   1. 基本・リセットCSS & グローバル設定
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0f172a; /* ダークブルー背景 */
+  color: #f8fafc;            /* 基本フォントカラー */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  padding-bottom: 3rem;
+}
+
+/* ==========================================================================
+   2. ヘッダーエリア & ナビゲーション
+   ========================================================================== */
+header {
+  background-color: rgba(15, 23, 42, 0.9);
+  border-bottom: 1px solid #1e293b;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(8px);
+  padding: 1rem;
+}
+
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.title-icon {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* フォームコントロール（プルダウン・ボタン等） */
+select {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  color: #fbbf24;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  outline: none;
+}
+
+select:focus {
+  border-color: #f59e0b;
+}
+
+.btn {
+  background-color: #334155;
+  color: #f8fafc;
+  border: 1px solid #475569;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #475569;
+  border-color: #64748b;
+}
+
+.btn-amber {
+  background-color: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.btn-amber:hover {
+  background-color: rgba(245, 158, 11, 0.3);
+}
+
+.btn-rose {
+  background-color: rgba(244, 63, 94, 0.2);
+  color: #fb7185;
+  border: 1px solid rgba(244, 63, 94, 0.4);
+}
+
+.btn-rose:hover {
+  background-color: rgba(244, 63, 94, 0.3);
+}
+
+/* ==========================================================================
+   3. メインレイアウト & カードコンポーネント
+   ========================================================================== */
+main {
+  max-width: 1280px;
+  margin: 1.5rem auto 0;
+  padding: 0 1rem;
+}
+
+.glass-card {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.25rem;
+}
+
+.monster-info {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.badge {
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.125rem 0.625rem;
+  border-radius: 0.25rem;
+}
+
+.badge-amber {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.badge-slate {
+  background: #1e293b;
+  color: #cbd5e1;
+  border: 1px solid #334155;
+}
+
+.badge-id {
+  background: rgba(99, 102, 241, 0.2);
+  color: #818cf8;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  font-family: monospace;
+}
+
+/* ==========================================================================
+   4. リール・コマンドスロットレイアウト
+   ========================================================================== */
+.grid-reels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.reel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.reel-title {
+  font-weight: bold;
+  color: #fbbf24;
+}
+
+.cap-badge {
+  font-family: monospace;
+  font-size: 0.75rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  background: #1e293b;
+  color: #cbd5e1;
+}
+
+.cap-badge.over {
+  background: rgba(244, 63, 94, 0.2);
+  color: #fb7185;
+  border: 1px solid rgba(244, 63, 94, 0.3);
+}
+
+.meter-bg {
+  width: 100%;
+  background: #0f172a;
+  border-radius: 9999px;
+  height: 0.5rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border: 1px solid #1e293b;
+}
+
+.meter-fill {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+  background: #fbbf24;
+}
+
+.meter-fill.over {
+  background: #f43f5e;
+}
+
+.slot-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.slot-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.slot-num {
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: #64748b;
+  width: 1rem;
+}
+
+.slot-select {
+  width: 100%;
+  color: #e2e8f0;
+  background: #0f172a;
+  border: 1px solid rgba(51, 65, 85, 0.8);
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  transition: border-color 0.2s;
+}
+
+/* コマンドのレアリティ・色に応じた枠線強調スタイル */
+.slot-select.color-オレンジ { border-left: 4px solid #f97316; }
+.slot-select.color-砂       { border-left: 4px solid #a8a29e; }
+.slot-select.color-銅       { border-left: 4px solid #b45309; }
+.slot-select.color-銀       { border-left: 4px solid #94a3b8; }
+.slot-select.color-金       { border-left: 4px solid #eab308; }
+
+/* ==========================================================================
+   5. モーダルダイアログ（お気に入り一覧）
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modal-header {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #334155;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-body {
+  padding: 1.25rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.favorite-item {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
