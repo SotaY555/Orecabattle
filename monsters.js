@@ -7,13 +7,13 @@ const MONSTERS = {
       rarity: 1,
       attribute: "土",
       race: "幻獣",
-      stats: { hp: "42-44", attack: "25-26", speed: "12-13" },
+      stats: {"hp":"42-44","attack":"25-26","speed":"12-13"},
       exSkill: "宝石つぶて→宝石みだれうち",
       maxCapacity: [14],
       initialReels: [
         [3 /* ミス (コスト:0) */, 11 /* こうげき (コスト:1) */, 41 /* こうげき! (コスト:2) */, 18 /* EXゲージ+1 (コスト:1) */, 48 /* EXゲージ+2 (コスト:2) */, 88 /* 宝石弾 (コスト:2.6) */]
       ],
-      availableSkillIds: [3, 11, 18, 41, 48, 88, 124]
+      availableSkillIds: [3,11,18,41,48,88,124]
     },
     {
       id: "OBS00-002",
@@ -21,13 +21,13 @@ const MONSTERS = {
       rarity: 1,
       attribute: "風",
       race: "水族",
-      stats: { hp: "33-35", attack: "21-22", speed: "8" },
+      stats: {"hp":"33-35","attack":"21-22","speed":"8"},
       exSkill: "自爆!! → 自爆!!!",
       maxCapacity: [14.6],
       initialReels: [
         [3 /* ミス (コスト:0) */, 11 /* こうげき (コスト:1) */, 11 /* こうげき (コスト:1) */, 41 /* こうげき! (コスト:2) */, 90 /* 自爆 (コスト:2.6) */, 514 /* とっこう (コスト:6) */]
       ],
-      availableSkillIds: [3, 11, 41, 90, 514]
+      availableSkillIds: [3,11,41,90,514]
     },
     {
       id: "OBS00-003",
@@ -35,13 +35,13 @@ const MONSTERS = {
       rarity: 1,
       attribute: "水",
       race: "獣",
-      stats: { hp: "42-44", attack: "21-22", speed: "38-40" },
+      stats: {"hp":"42-44","attack":"21-22","speed":"38-40"},
       exSkill: "プリンセスの命令 → 王女の命令",
       maxCapacity: [9],
       initialReels: [
         [3 /* ミス (コスト:0) */, 11 /* こうげき (コスト:1) */, 11 /* こうげき (コスト:1) */, 41 /* こうげき! (コスト:2) */, 259 /* 会心の一撃 (コスト:4) */, 16 /* プリンセスのおうえん (コスト:1) */]
       ],
-      availableSkillIds: [3, 11, 16, 41, 259]
+      availableSkillIds: [3,11,16,41,259]
     },
     {
       id: "OBS00-004",
@@ -49,14 +49,14 @@ const MONSTERS = {
       rarity: 2,
       attribute: "水",
       race: "獣",
-      stats: { hp: "84-89", attack: "35-37", speed: "50-53" },
+      stats: {"hp":"84-89","attack":"35-37","speed":"50-53"},
       exSkill: "王女の命令 → 女王の命令",
-      maxCapacity: [12, 12],
+      maxCapacity: [12,12],
       initialReels: [
         [3 /* ミス (コスト:0) */, 11 /* こうげき (コスト:1) */, 11 /* こうげき (コスト:1) */, 41 /* こうげき! (コスト:2) */, 259 /* 会心の一撃 (コスト:4) */, 16 /* プリンセスのおうえん (コスト:1) */],
         [3 /* ミス (コスト:0) */, 41 /* こうげき! (コスト:2) */, 16 /* プリンセスのおうえん (コスト:1) */, 16 /* プリンセスのおうえん (コスト:1) */, 16 /* プリンセスのおうえん (コスト:1) */, 47 /* 王女のせいえん (コスト:2) */]
       ],
-      availableSkillIds: [3, 11, 16, 41, 47, 104, 259]
+      availableSkillIds: [3,11,16,41,47,104,259]
     },
     {
       id: "OBS00-005",
@@ -64,15 +64,15 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "獣",
-      stats: { hp: "152-161", attack: "42-44", speed: "59-62" },
+      stats: {"hp":"152-161","attack":"42-44","speed":"59-62"},
       exSkill: "女王の命令 → 女王の絶対命令",
-      maxCapacity: [12, 14, 21],
+      maxCapacity: [12,14,21],
       initialReels: [
         [3 /* ミス (コスト:0) */, 11 /* こうげき (コスト:1) */, 11 /* こうげき (コスト:1) */, 41 /* こうげき! (コスト:2) */, 259 /* 会心の一撃 (コスト:4) */, 16 /* プリンセスのおうえん (コスト:1) */],
         [3 /* ミス (コスト:0) */, 41 /* こうげき! (コスト:2) */, 16 /* プリンセスのおうえん (コスト:1) */, 16 /* プリンセスのおうえん (コスト:1) */, 16 /* プリンセスのおうえん (コスト:1) */, 47 /* 王女のせいえん (コスト:2) */],
         [1 /* ★★★→★ (コスト:-1.2) */, 47 /* 王女のせいえん (コスト:2) */, 47 /* 王女のせいえん (コスト:2) */, 288 /* EXゲージ+4 (コスト:4) */, 153 /* 召喚★★ (コスト:3.2) */, 123 /* 女王のごほうび (コスト:3) */]
       ],
-      availableSkillIds: [1, 3, 11, 16, 41, 47, 104, 123, 153, 258, 259, 288]
+      availableSkillIds: [1,3,11,16,41,47,104,123,153,258,259,288]
     },
     {
       id: "OBS00-006",
@@ -80,10 +80,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "火",
       race: "獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -92,10 +94,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -104,10 +110,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "水",
       race: "水族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -116,10 +124,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "水族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -128,10 +141,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "水",
       race: "スライム",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -140,10 +155,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "火",
       race: "スライム",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -152,10 +169,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "風",
       race: "スライム",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -164,10 +184,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "土",
       race: "スライム",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -176,10 +200,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "スライム",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -188,10 +217,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "火",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -200,10 +231,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "火",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -212,10 +246,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "火",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -224,10 +262,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -236,10 +279,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "火",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -248,10 +294,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "火",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -260,10 +310,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "風",
       race: "魔法使い",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -272,10 +325,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "風",
       race: "魔法使い",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -284,10 +341,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "土",
       race: "機械",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -296,10 +356,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "土",
       race: "機械",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -308,10 +372,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "水",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -320,10 +387,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -332,10 +403,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "水",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -344,10 +418,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -356,10 +434,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "土",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -368,10 +449,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "土",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -380,10 +465,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -392,10 +482,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "風",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -404,10 +497,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "風",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -416,10 +513,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -428,10 +530,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "特殊",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -440,10 +545,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "特殊",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -452,10 +561,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "特殊",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -464,10 +578,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "火",
       race: "召喚士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -476,10 +593,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "火",
       race: "召喚士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -488,10 +609,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "召喚士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -500,10 +626,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "土",
       race: "召喚士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -512,10 +642,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "風",
       race: "幻獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -524,10 +658,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -536,10 +675,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -548,10 +692,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "土",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -560,10 +706,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "土",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -572,10 +721,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "土",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -584,10 +737,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -596,10 +754,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "水",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -608,10 +769,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -620,10 +785,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -632,10 +801,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -644,10 +818,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "風",
       race: "機械",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -656,10 +832,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "機械",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -668,10 +849,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "火",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -680,10 +864,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "火",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -692,10 +880,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -704,10 +897,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "風",
       race: "幻獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -716,10 +913,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -728,10 +930,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     }
   ],
@@ -742,10 +949,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "土",
       race: "幻獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -754,10 +963,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "風",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -766,10 +977,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "風",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -778,10 +992,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "風",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -790,10 +1008,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "水",
       race: "水族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -802,10 +1022,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "水",
       race: "魔法使い",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -814,10 +1037,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "魔法使い",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -826,10 +1053,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "水",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -838,10 +1067,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "水",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -850,10 +1082,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -862,10 +1098,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -874,10 +1115,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "火",
       race: "水族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -886,10 +1129,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "水族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -898,10 +1146,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "風",
       race: "水族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -910,10 +1161,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "水",
       race: "スライム",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -922,10 +1176,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "火",
       race: "スライム",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -934,10 +1191,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "風",
       race: "機械",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -946,10 +1206,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "水",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -958,10 +1221,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -970,10 +1237,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "風",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -982,10 +1252,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "風",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -994,10 +1268,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "土",
       race: "鳥獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1006,10 +1283,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "土",
       race: "鳥獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1018,10 +1299,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "土",
       race: "鳥獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1030,10 +1315,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "水",
       race: "水族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1042,10 +1330,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "水族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1054,10 +1346,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1066,10 +1362,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "特殊",
       race: "海竜",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1078,10 +1377,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "特殊",
       race: "海竜",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1090,10 +1393,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "特殊",
       race: "海竜",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1102,10 +1410,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "水",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1114,10 +1425,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1126,10 +1441,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1138,10 +1458,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "火",
       race: "火族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1150,10 +1473,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "火",
       race: "火族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1162,10 +1489,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "火族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1174,10 +1506,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "火",
       race: "獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1186,10 +1522,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "天使",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1198,10 +1538,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "天使",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1210,10 +1555,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1222,10 +1572,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "水",
       race: "魔法使い",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1234,10 +1587,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "魔法使い",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1246,10 +1603,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "火",
       race: "魔法使い",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1258,10 +1619,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1270,10 +1636,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1282,10 +1653,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "土",
       race: "幻獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1294,10 +1669,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "風族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1306,10 +1686,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1318,10 +1703,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "火族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1330,10 +1720,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     }
   ],
@@ -1344,10 +1739,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "風",
       race: "水族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1356,10 +1753,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "水",
       race: "天使",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1368,10 +1767,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "水",
       race: "天使",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1380,10 +1782,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "土",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1392,10 +1796,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "土",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1404,10 +1811,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "土",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1416,10 +1827,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1428,10 +1844,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "風",
       race: "鳥獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1440,10 +1858,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "鳥獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1452,10 +1875,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "土",
       race: "スライム",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1464,10 +1890,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "風",
       race: "スライム",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1476,10 +1905,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "土",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1488,10 +1920,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "土",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1500,10 +1936,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "土",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1512,10 +1951,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "土",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1524,10 +1967,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "水",
       race: "土族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1536,10 +1982,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "土族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1548,10 +1998,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "風",
       race: "土族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1560,10 +2013,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "風",
       race: "土族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1572,10 +2029,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "火",
       race: "特殊",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1584,10 +2044,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "火",
       race: "特殊",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1596,10 +2060,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "特殊",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1608,10 +2077,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "土",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1620,10 +2092,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "土",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1632,10 +2108,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "機械",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1644,10 +2125,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "土",
       race: "アンデッド",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1656,10 +2140,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "アンデッド",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1668,10 +2157,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "アンデッド",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1680,10 +2174,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "風",
       race: "獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1692,10 +2190,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "土",
       race: "土族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1704,10 +2206,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1716,10 +2223,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1728,10 +2240,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "火",
       race: "火族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1740,10 +2256,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "土",
       race: "機械",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1752,10 +2272,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "機械",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1764,10 +2289,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "天使",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1776,10 +2306,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "機械",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1788,10 +2323,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "機械",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1800,10 +2340,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1812,10 +2357,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     }
   ],
@@ -1826,10 +2376,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "風",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1838,10 +2390,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "風",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1850,10 +2405,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "風",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1862,10 +2421,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1874,10 +2438,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "風",
       race: "植物",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1886,10 +2452,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "植物",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1898,10 +2468,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "火",
       race: "植物",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1910,10 +2484,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "風",
       race: "幻獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1922,10 +2498,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "幻獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1934,10 +2515,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "風",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1946,10 +2530,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "風",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1958,10 +2546,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "水",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1970,10 +2561,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1982,10 +2577,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "水",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -1994,10 +2592,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2006,10 +2608,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2018,10 +2625,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "特殊",
       race: "幻獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2030,10 +2640,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "特殊",
       race: "幻獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2042,10 +2656,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "特殊",
       race: "幻獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2054,10 +2673,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "火",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2066,10 +2688,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "火",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2078,10 +2704,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2090,10 +2721,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "風",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2102,10 +2736,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "風",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2114,10 +2752,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2126,10 +2769,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "火",
       race: "火族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2138,10 +2784,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "火族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2150,10 +2801,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "土",
       race: "獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2162,10 +2817,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "火",
       race: "火族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2174,10 +2833,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "火族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2186,10 +2850,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2198,10 +2867,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2210,10 +2884,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "風",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2222,10 +2899,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "風",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2234,10 +2915,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2246,10 +2932,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2258,10 +2949,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2270,10 +2966,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2282,10 +2983,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2294,10 +3000,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     }
   ],
@@ -2308,10 +3019,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "土",
       race: "スライム",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2320,10 +3033,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "火",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2332,10 +3047,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "火",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2344,10 +3062,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "火",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2356,10 +3078,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2368,10 +3095,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "土",
       race: "昆虫",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2380,10 +3109,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2392,10 +3126,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "土",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2404,10 +3140,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2416,10 +3157,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "火",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2428,10 +3172,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "火",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2440,10 +3188,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "水",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2452,10 +3203,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2464,10 +3219,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "風",
       race: "風族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2476,10 +3234,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "風",
       race: "風族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2488,10 +3250,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "風",
       race: "風族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2500,10 +3265,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "風",
       race: "風族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2512,10 +3281,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "特殊",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2524,10 +3296,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "特殊",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2536,10 +3312,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "特殊",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2548,10 +3329,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "水",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2560,10 +3344,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2572,10 +3360,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2584,10 +3377,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "火",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2596,10 +3392,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "火",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2608,10 +3408,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2620,10 +3425,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "水",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2632,10 +3440,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2644,10 +3456,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2656,10 +3473,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "火",
       race: "魔法使い",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2668,10 +3489,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2680,10 +3506,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2692,10 +3523,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "土",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2704,10 +3538,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "土",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2716,10 +3554,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2728,10 +3571,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "風族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2740,10 +3588,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2752,10 +3605,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "火",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2764,10 +3621,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "魔法使い",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2776,10 +3638,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     }
   ],
@@ -2790,10 +3657,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "土",
       race: "スライム",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2802,10 +3671,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "土",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2814,10 +3685,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "土",
       race: "召喚士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2826,10 +3700,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "土",
       race: "召喚士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2838,10 +3716,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "水",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2850,10 +3730,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "水",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2862,10 +3745,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2874,10 +3761,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2886,10 +3778,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "火",
       race: "水族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2898,10 +3792,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "水族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2910,10 +3809,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "土",
       race: "土族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2922,10 +3824,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "土族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2934,10 +3841,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "水",
       race: "特殊",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2946,10 +3856,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "特殊",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2958,10 +3872,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "水",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2970,10 +3887,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2982,10 +3903,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "風",
       race: "獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -2994,10 +3918,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "風",
       race: "獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3006,10 +3934,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "土",
       race: "機械",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3018,10 +3949,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "水",
       race: "水族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3030,10 +3964,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "水族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3042,10 +3980,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "水族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3054,10 +3997,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "風",
       race: "幻獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3066,10 +4012,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "風",
       race: "幻獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3078,10 +4028,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "幻獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3090,10 +4045,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3102,10 +4061,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3114,10 +4078,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3126,10 +4095,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "天使",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3138,10 +4112,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3150,10 +4129,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3162,10 +4146,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "水",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3174,10 +4161,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3186,10 +4177,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3198,10 +4194,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "特殊",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3210,10 +4211,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3222,10 +4228,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "天使",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3234,10 +4244,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "風",
       race: "天使",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3246,10 +4260,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "火",
       race: "天使",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3258,10 +4276,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "天使",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3270,10 +4293,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3282,10 +4310,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "土",
       race: "機械",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3294,10 +4326,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "土",
       race: "天使",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3306,10 +4342,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "天使",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3318,11 +4359,16 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
-      exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
-      availableSkillIds: []
+      stats: {"hp":"318-337","attack":"63-67","speed":"55-58"},
+      exSkill: "報復絶唱(ファルセット・カルマ) → 輪音転唱(サング・サンサーラ)",
+      maxCapacity: [17.6,22,26.2,29.6],
+      initialReels: [
+        [4 /* ほほえんでいる (コスト:0) */, 11 /* こうげき (コスト:1) */, 11 /* こうげき (コスト:1) */, 22 /* ためる(リール1) (コスト:1) */, 104 /* ★→★★ (コスト:3) */, 458 /* 冰琴 (コスト:5) */],
+        [11 /* こうげき (コスト:1) */, 11 /* こうげき (コスト:1) */, 41 /* こうげき! (コスト:2) */, 495 /* 邪帝の一撃 (コスト:5.6) */, 258 /* ★★→★★★ (コスト:4) */, 458 /* 冰琴 (コスト:5) */],
+        [240 /* 顛調 (コスト:3.6) */, 240 /* 顛調 (コスト:3.6) */, 11 /* こうげき (コスト:1) */, 41 /* こうげき! (コスト:2) */, 408 /* ★★★→★★★★ (コスト:5) */, 458 /* 冰琴 (コスト:5) */],
+        [240 /* 顛調 (コスト:3.6) */, 240 /* 顛調 (コスト:3.6) */, 495 /* 邪帝の一撃 (コスト:5.6) */, 495 /* 邪帝の一撃 (コスト:5.6) */, 458 /* 冰琴 (コスト:5) */, 458 /* 冰琴 (コスト:5) */]
+      ],
+      availableSkillIds: [4,11,22,29,38,41,104,240,258,408,458,495]
     }
   ],
   "第6章": [
@@ -3332,10 +4378,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "風",
       race: "水族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3344,10 +4392,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "土",
       race: "アンデッド",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3356,10 +4406,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "土",
       race: "アンデッド",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3368,10 +4421,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "水",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3380,10 +4435,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "水",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3392,10 +4450,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3404,10 +4466,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3416,10 +4483,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "風",
       race: "アンデッド",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3428,10 +4497,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "風",
       race: "アンデッド",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3440,10 +4513,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "土",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3452,10 +4528,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "土",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3464,10 +4544,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "特殊",
       race: "アンデッド",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3476,10 +4559,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "特殊",
       race: "アンデッド",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3488,10 +4575,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "水",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3500,10 +4590,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3512,10 +4606,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3524,10 +4623,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "風",
       race: "魔法使い",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3536,10 +4638,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "風",
       race: "魔法使い",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3548,10 +4654,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "魔法使い",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3560,10 +4671,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "土",
       race: "アンデッド",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3572,10 +4686,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "土",
       race: "アンデッド",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3584,10 +4702,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "アンデッド",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3596,10 +4719,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "火",
       race: "幻獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3608,10 +4735,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "風",
       race: "幻獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3620,10 +4751,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "土",
       race: "アンデッド",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3632,10 +4767,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "アンデッド",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3644,10 +4784,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "天使",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3656,10 +4800,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "天使",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3668,10 +4817,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "召喚士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3680,10 +4834,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3692,10 +4851,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "アンデッド",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3704,10 +4868,12 @@ const MONSTERS = {
       rarity: 1,
       attribute: "土",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
       maxCapacity: [12],
-      initialReels: [[]],
+      initialReels: [
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3716,10 +4882,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "土",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3728,10 +4897,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "土",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3740,10 +4913,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3752,10 +4930,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "特殊",
       race: "アンデッド",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3764,10 +4947,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "土",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3776,10 +4962,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "土",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3788,10 +4978,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3800,10 +4995,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "幻獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3812,10 +5012,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "鳥獣",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     }
   ],
@@ -3826,10 +5031,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3838,10 +5048,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3850,10 +5065,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3862,10 +5082,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3874,10 +5099,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3886,10 +5116,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3898,10 +5132,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3910,10 +5149,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "土",
       race: "スライム",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3922,10 +5165,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3934,10 +5182,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "風",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3946,10 +5198,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3958,16 +5215,16 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "悪魔",
-      stats: { hp: "277-293", attack: "71-75", speed: "62-66" },
+      stats: {"hp":"277-293","attack":"71-75","speed":"62-66"},
       exSkill: "デュア・リズム→DUA・RHYTHM",
-      maxCapacity: [16.8, 21, 24.6, 28.8],
+      maxCapacity: [16.8,21,24.6,28.8],
       initialReels: [
         [4 /* ほほえんでいる (コスト:0) */, 11 /* こうげき (コスト:1) */, 41 /* こうげき! (コスト:2) */, 104 /* ★→★★ (コスト:3) */, 104 /* ★→★★ (コスト:3) */, 247 /* メェ (コスト:3.6) */],
         [4 /* ほほえんでいる (コスト:0) */, 41 /* こうげき! (コスト:2) */, 87 /* 銃電中 (コスト:2.4) */, 87 /* 銃電中 (コスト:2.4) */, 258 /* ★★→★★★ (コスト:4) */, 247 /* メェ (コスト:3.6) */],
         [11 /* こうげき (コスト:1) */, 247 /* メェ (コスト:3.6) */, 247 /* メェ (コスト:3.6) */, 87 /* 銃電中 (コスト:2.4) */, 408 /* ★★★→★★★★ (コスト:5) */, 378 /* 魔王の一撃 (コスト:4.8) */],
         [41 /* こうげき! (コスト:2) */, 247 /* メェ (コスト:3.6) */, 247 /* メェ (コスト:3.6) */, 482 /* 大行侵 (コスト:5.2) */, 482 /* 大行侵 (コスト:5.2) */, 378 /* 魔王の一撃 (コスト:4.8) */]
       ],
-      availableSkillIds: [4, 11, 22, 29, 38, 41, 87, 104, 247, 258, 378, 408, 482]
+      availableSkillIds: [4,11,22,29,38,41,87,104,247,258,378,408,482]
     },
     {
       id: "OBSBR-001",
@@ -3975,10 +5232,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3987,10 +5249,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -3999,10 +5266,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -4011,10 +5283,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -4023,10 +5300,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -4035,10 +5317,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -4047,10 +5334,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -4059,10 +5351,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -4071,10 +5368,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "天使",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -4083,10 +5385,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -4095,10 +5402,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "火族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -4107,10 +5419,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "戦士",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -4119,10 +5436,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "悪魔",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -4131,10 +5453,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "火",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -4143,10 +5470,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -4155,10 +5487,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "土",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -4167,10 +5504,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -4179,10 +5521,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "風",
       race: "ドラゴン",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -4191,10 +5538,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "水",
       race: "水族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -4203,10 +5553,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "水族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -4215,10 +5569,15 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "水族",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18, 21],
-      initialReels: [[], [], [], []],
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -4227,10 +5586,13 @@ const MONSTERS = {
       rarity: 2,
       attribute: "風",
       race: "魔法使い",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15],
-      initialReels: [[], []],
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
       availableSkillIds: []
     },
     {
@@ -4239,10 +5601,14 @@ const MONSTERS = {
       rarity: 3,
       attribute: "風",
       race: "魔法使い",
-      stats: { hp: "???", attack: "???", speed: "???" },
+      stats: {"hp":"???","attack":"???","speed":"???"},
       exSkill: "???",
-      maxCapacity: [12, 15, 18],
-      initialReels: [[], [], []],
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
       availableSkillIds: []
     }
   ]
