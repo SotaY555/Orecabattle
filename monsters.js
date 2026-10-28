@@ -8,10 +8,7 @@ const MONSTERS = {
       attribute: "土",
       race: "幻獣",
       stats: {"hp":"42-44","attack":"25-26","speed":"12-13"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [14],
       initialReels: [
         [3 /* ミス (コスト:0) */, 11 /* こうげき (コスト:1) */, 41 /* こうげき! (コスト:2) */, 18 /* EXゲージ+1 (コスト:1) */, 48 /* EXゲージ+2 (コスト:2) */, 88 /* 宝石弾 (コスト:2.6) */]
@@ -25,10 +22,7 @@ const MONSTERS = {
       attribute: "風",
       race: "水族",
       stats: {"hp":"33-35","attack":"21-22","speed":"8"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [14.6],
       initialReels: [
         [3 /* ミス (コスト:0) */, 11 /* こうげき (コスト:1) */, 11 /* こうげき (コスト:1) */, 41 /* こうげき! (コスト:2) */, 90 /* 自爆 (コスト:2.6) */, 514 /* とっこう (コスト:6) */]
@@ -42,10 +36,7 @@ const MONSTERS = {
       attribute: "水",
       race: "獣",
       stats: {"hp":"42-44","attack":"21-22","speed":"38-40"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [9],
       initialReels: [
         [3 /* ミス (コスト:0) */, 11 /* こうげき (コスト:1) */, 11 /* こうげき (コスト:1) */, 41 /* こうげき! (コスト:2) */, 259 /* 会心の一撃 (コスト:4) */, 16 /* プリンセスのおうえん (コスト:1) */]
@@ -59,10 +50,7 @@ const MONSTERS = {
       attribute: "水",
       race: "獣",
       stats: {"hp":"84-89","attack":"35-37","speed":"50-53"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,12],
       initialReels: [
         [3 /* ミス (コスト:0) */, 11 /* こうげき (コスト:1) */, 11 /* こうげき (コスト:1) */, 41 /* こうげき! (コスト:2) */, 259 /* 会心の一撃 (コスト:4) */, 16 /* プリンセスのおうえん (コスト:1) */],
@@ -77,10 +65,7 @@ const MONSTERS = {
       attribute: "水",
       race: "獣",
       stats: {"hp":"152-161","attack":"42-44","speed":"59-62"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,14,21],
       initialReels: [
         [3 /* ミス (コスト:0) */, 11 /* こうげき (コスト:1) */, 11 /* こうげき (コスト:1) */, 41 /* こうげき! (コスト:2) */, 259 /* 会心の一撃 (コスト:4) */, 16 /* プリンセスのおうえん (コスト:1) */],
@@ -96,10 +81,7 @@ const MONSTERS = {
       attribute: "火",
       race: "獣",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12],
       initialReels: [
         []
@@ -113,10 +95,7 @@ const MONSTERS = {
       attribute: "水",
       race: "獣",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -132,10 +111,7 @@ const MONSTERS = {
       attribute: "水",
       race: "水族",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12],
       initialReels: [
         []
@@ -149,10 +125,7 @@ const MONSTERS = {
       attribute: "水",
       race: "水族",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -169,10 +142,7 @@ const MONSTERS = {
       attribute: "水",
       race: "スライム",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12],
       initialReels: [
         []
@@ -186,10 +156,7 @@ const MONSTERS = {
       attribute: "火",
       race: "スライム",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12],
       initialReels: [
         []
@@ -203,10 +170,7 @@ const MONSTERS = {
       attribute: "風",
       race: "スライム",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -221,10 +185,7 @@ const MONSTERS = {
       attribute: "土",
       race: "スライム",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -240,10 +201,7 @@ const MONSTERS = {
       attribute: "火",
       race: "スライム",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -260,10 +218,7 @@ const MONSTERS = {
       attribute: "火",
       race: "ドラゴン",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12],
       initialReels: [
         []
@@ -277,10 +232,7 @@ const MONSTERS = {
       attribute: "火",
       race: "ドラゴン",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -295,10 +247,7 @@ const MONSTERS = {
       attribute: "火",
       race: "ドラゴン",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -314,10 +263,7 @@ const MONSTERS = {
       attribute: "火",
       race: "ドラゴン",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -334,10 +280,7 @@ const MONSTERS = {
       attribute: "火",
       race: "戦士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -352,10 +295,7 @@ const MONSTERS = {
       attribute: "火",
       race: "戦士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -371,10 +311,7 @@ const MONSTERS = {
       attribute: "風",
       race: "魔法使い",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -389,10 +326,7 @@ const MONSTERS = {
       attribute: "風",
       race: "魔法使い",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -408,10 +342,7 @@ const MONSTERS = {
       attribute: "土",
       race: "機械",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -426,10 +357,7 @@ const MONSTERS = {
       attribute: "土",
       race: "機械",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -445,10 +373,7 @@ const MONSTERS = {
       attribute: "水",
       race: "戦士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -463,10 +388,7 @@ const MONSTERS = {
       attribute: "水",
       race: "戦士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -482,10 +404,7 @@ const MONSTERS = {
       attribute: "水",
       race: "戦士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -500,10 +419,7 @@ const MONSTERS = {
       attribute: "水",
       race: "戦士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -519,10 +435,7 @@ const MONSTERS = {
       attribute: "土",
       race: "戦士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -537,10 +450,7 @@ const MONSTERS = {
       attribute: "土",
       race: "戦士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -556,10 +466,7 @@ const MONSTERS = {
       attribute: "土",
       race: "戦士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -576,10 +483,7 @@ const MONSTERS = {
       attribute: "風",
       race: "戦士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -594,10 +498,7 @@ const MONSTERS = {
       attribute: "風",
       race: "戦士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -613,10 +514,7 @@ const MONSTERS = {
       attribute: "風",
       race: "戦士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -633,10 +531,7 @@ const MONSTERS = {
       attribute: "特殊",
       race: "ドラゴン",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -651,10 +546,7 @@ const MONSTERS = {
       attribute: "特殊",
       race: "ドラゴン",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -670,10 +562,7 @@ const MONSTERS = {
       attribute: "特殊",
       race: "ドラゴン",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -690,10 +579,7 @@ const MONSTERS = {
       attribute: "火",
       race: "召喚士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -708,10 +594,7 @@ const MONSTERS = {
       attribute: "火",
       race: "召喚士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -727,10 +610,7 @@ const MONSTERS = {
       attribute: "火",
       race: "召喚士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -747,10 +627,7 @@ const MONSTERS = {
       attribute: "土",
       race: "召喚士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -766,10 +643,7 @@ const MONSTERS = {
       attribute: "風",
       race: "幻獣",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -785,10 +659,7 @@ const MONSTERS = {
       attribute: "火",
       race: "悪魔",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -805,10 +676,7 @@ const MONSTERS = {
       attribute: "火",
       race: "悪魔",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -825,10 +693,7 @@ const MONSTERS = {
       attribute: "土",
       race: "ドラゴン",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12],
       initialReels: [
         []
@@ -842,10 +707,7 @@ const MONSTERS = {
       attribute: "土",
       race: "ドラゴン",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -860,10 +722,7 @@ const MONSTERS = {
       attribute: "土",
       race: "ドラゴン",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -879,10 +738,7 @@ const MONSTERS = {
       attribute: "土",
       race: "ドラゴン",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -899,10 +755,7 @@ const MONSTERS = {
       attribute: "水",
       race: "戦士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -917,10 +770,7 @@ const MONSTERS = {
       attribute: "水",
       race: "戦士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -936,10 +786,7 @@ const MONSTERS = {
       attribute: "水",
       race: "獣",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -955,10 +802,7 @@ const MONSTERS = {
       attribute: "水",
       race: "戦士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -975,10 +819,7 @@ const MONSTERS = {
       attribute: "風",
       race: "機械",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12],
       initialReels: [
         []
@@ -992,10 +833,7 @@ const MONSTERS = {
       attribute: "風",
       race: "機械",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -1012,10 +850,7 @@ const MONSTERS = {
       attribute: "火",
       race: "戦士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -1030,10 +865,7 @@ const MONSTERS = {
       attribute: "火",
       race: "戦士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -1049,10 +881,7 @@ const MONSTERS = {
       attribute: "火",
       race: "戦士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -1069,10 +898,7 @@ const MONSTERS = {
       attribute: "風",
       race: "幻獣",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -1088,10 +914,7 @@ const MONSTERS = {
       attribute: "火",
       race: "悪魔",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -1108,10 +931,7 @@ const MONSTERS = {
       attribute: "火",
       race: "悪魔",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -1130,10 +950,7 @@ const MONSTERS = {
       attribute: "土",
       race: "幻獣",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12],
       initialReels: [
         []
@@ -1147,10 +964,7 @@ const MONSTERS = {
       attribute: "風",
       race: "ドラゴン",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12],
       initialReels: [
         []
@@ -1164,10 +978,7 @@ const MONSTERS = {
       attribute: "風",
       race: "ドラゴン",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },  
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -1182,10 +993,7 @@ const MONSTERS = {
       attribute: "風",
       race: "ドラゴン",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -1201,10 +1009,7 @@ const MONSTERS = {
       attribute: "水",
       race: "水族",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12],
       initialReels: [
         []
@@ -1218,10 +1023,7 @@ const MONSTERS = {
       attribute: "水",
       race: "魔法使い",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -1236,10 +1038,7 @@ const MONSTERS = {
       attribute: "水",
       race: "魔法使い",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -1255,10 +1054,7 @@ const MONSTERS = {
       attribute: "水",
       race: "ドラゴン",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12],
       initialReels: [
         []
@@ -1272,10 +1068,7 @@ const MONSTERS = {
       attribute: "水",
       race: "ドラゴン",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -1290,10 +1083,7 @@ const MONSTERS = {
       attribute: "水",
       race: "ドラゴン",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -1309,10 +1099,7 @@ const MONSTERS = {
       attribute: "水",
       race: "ドラゴン",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -1329,10 +1116,7 @@ const MONSTERS = {
       attribute: "火",
       race: "水族",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12],
       initialReels: [
         []
@@ -1346,10 +1130,7 @@ const MONSTERS = {
       attribute: "水",
       race: "水族",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -1366,10 +1147,7 @@ const MONSTERS = {
       attribute: "風",
       race: "水族",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -1384,10 +1162,7 @@ const MONSTERS = {
       attribute: "水",
       race: "スライム",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -1402,10 +1177,7 @@ const MONSTERS = {
       attribute: "火",
       race: "スライム",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -1420,10 +1192,7 @@ const MONSTERS = {
       attribute: "風",
       race: "機械",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -1438,10 +1207,7 @@ const MONSTERS = {
       attribute: "水",
       race: "戦士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -1456,10 +1222,7 @@ const MONSTERS = {
       attribute: "水",
       race: "戦士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -1475,10 +1238,7 @@ const MONSTERS = {
       attribute: "風",
       race: "戦士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -1493,10 +1253,7 @@ const MONSTERS = {
       attribute: "風",
       race: "戦士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -1512,10 +1269,7 @@ const MONSTERS = {
       attribute: "土",
       race: "鳥獣",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -1530,10 +1284,7 @@ const MONSTERS = {
       attribute: "土",
       race: "鳥獣",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -1549,10 +1300,7 @@ const MONSTERS = {
       attribute: "土",
       race: "鳥獣",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -1568,10 +1316,7 @@ const MONSTERS = {
       attribute: "水",
       race: "水族",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -1586,10 +1331,7 @@ const MONSTERS = {
       attribute: "水",
       race: "水族",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -1605,10 +1347,7 @@ const MONSTERS = {
       attribute: "水",
       race: "悪魔",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -1624,10 +1363,7 @@ const MONSTERS = {
       attribute: "特殊",
       race: "海竜",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -1642,10 +1378,7 @@ const MONSTERS = {
       attribute: "特殊",
       race: "海竜",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -1661,10 +1394,7 @@ const MONSTERS = {
       attribute: "特殊",
       race: "海竜",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -1681,10 +1411,7 @@ const MONSTERS = {
       attribute: "水",
       race: "戦士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -1699,10 +1426,7 @@ const MONSTERS = {
       attribute: "水",
       race: "戦士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -1718,10 +1442,7 @@ const MONSTERS = {
       attribute: "水",
       race: "戦士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -1738,10 +1459,7 @@ const MONSTERS = {
       attribute: "火",
       race: "火族",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -1756,10 +1474,7 @@ const MONSTERS = {
       attribute: "火",
       race: "火族",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -1775,10 +1490,7 @@ const MONSTERS = {
       attribute: "火",
       race: "火族",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -1795,10 +1507,7 @@ const MONSTERS = {
       attribute: "火",
       race: "獣",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -1814,10 +1523,7 @@ const MONSTERS = {
       attribute: "水",
       race: "天使",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -1833,10 +1539,7 @@ const MONSTERS = {
       attribute: "風",
       race: "天使",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -1853,10 +1556,7 @@ const MONSTERS = {
       attribute: "水",
       race: "悪魔",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -1873,10 +1573,7 @@ const MONSTERS = {
       attribute: "水",
       race: "魔法使い",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15],
       initialReels: [
         [],
@@ -1891,10 +1588,7 @@ const MONSTERS = {
       attribute: "水",
       race: "魔法使い",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -1910,10 +1604,7 @@ const MONSTERS = {
       attribute: "火",
       race: "魔法使い",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -1929,10 +1620,7 @@ const MONSTERS = {
       attribute: "風",
       race: "ドラゴン",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -1949,10 +1637,7 @@ const MONSTERS = {
       attribute: "土",
       race: "ドラゴン",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -1969,10 +1654,7 @@ const MONSTERS = {
       attribute: "土",
       race: "幻獣",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18],
       initialReels: [
         [],
@@ -1988,10 +1670,7 @@ const MONSTERS = {
       attribute: "風",
       race: "風族",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -2008,10 +1687,7 @@ const MONSTERS = {
       attribute: "水",
       race: "戦士",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -2028,10 +1704,7 @@ const MONSTERS = {
       attribute: "火",
       race: "火族",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -2048,10 +1721,7 @@ const MONSTERS = {
       attribute: "水",
       race: "悪魔",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12,15,18,21],
       initialReels: [
         [],
@@ -2070,10 +1740,7 @@ const MONSTERS = {
       attribute: "風",
       race: "水族",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12],
       initialReels: [
         []
@@ -2087,10 +1754,7 @@ const MONSTERS = {
       attribute: "水",
       race: "天使",
       stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: {
-        normal: { name: "未入力", effect: "未入力" },
-        super:  { name: "未入力", effect: "未入力" }
-      },
+      exSkill: {"normal":{"name":"未入力","effect":"未入力"},"super":{"name":"未入力","effect":"未入力"}},
       maxCapacity: [12],
       initialReels: [
         []
@@ -3761,14 +3425,14 @@ const MONSTERS = {
       rarity: 2,
       attribute: "水",
       race: "悪魔",
-      stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: "???",
-      maxCapacity: [12,15],
+      stats: {"hp":"80-85","attack":"42-44","speed":"55-58"},
+      exSkill: "悪魔の誘惑 → 悪魔の色香",
+      maxCapacity: [14.6,17.2],
       initialReels: [
-        [],
-        []
+        [4 /* ほほえんでいる (コスト:0) */, 4 /* ほほえんでいる (コスト:0) */, 34 /* アクマのながしめ (コスト:1.6) */, 34 /* アクマのながしめ (コスト:1.6) */, 104 /* ★→★★ (コスト:3) */, 104 /* ★→★★ (コスト:3) */],
+        [2 /* ★★→★ (コスト:-1) */, 2 /* ★★→★ (コスト:-1) */, 95 /* アクマのくちづけ (コスト:2.6) */, 34 /* アクマのながしめ (コスト:1.6) */, 34 /* アクマのながしめ (コスト:1.6) */, 575 /* ふっかつの秘宝 (コスト:4.8) */]
       ],
-      availableSkillIds: []
+      availableSkillIds: [2,4,11,34,41,95,104,575]
     },
     {
       id: "OBS04-028",
@@ -3776,15 +3440,15 @@ const MONSTERS = {
       rarity: 3,
       attribute: "水",
       race: "悪魔",
-      stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: "???",
-      maxCapacity: [12,15,18],
+      stats: {"hp":"157-166","attack":"46-49","speed":"55-58"},
+      exSkill: "悪魔の色香 → 悪魔のひみつ♥",
+      maxCapacity: [15.6,20,22.8],
       initialReels: [
-        [],
-        [],
-        []
+        [4 /* ほほえんでいる (コスト:0) */, 4 /* ほほえんでいる (コスト:0) */, 34 /* アクマのながしめ (コスト:1.6) */, 34 /* アクマのながしめ (コスト:1.6) */, 104 /* ★→★★ (コスト:3) */, 104 /* ★→★★ (コスト:3) */],
+        [2 /* ★★→★ (コスト:-1) */, 2 /* ★★→★ (コスト:-1) */, 95 /* アクマのくちづけ (コスト:2.6) */, 34 /* アクマのながしめ (コスト:1.6) */, 34 /* アクマのながしめ (コスト:1.6) */, 575 /* ふっかつの秘宝 (コスト:4.8) */],
+        [1 /* ★★★→★ (コスト:-1.2) */, 229 /* アクマのゆうわく (コスト:3.6) */, 95 /* アクマのくちづけ (コスト:2.6) */, 34 /* アクマのながしめ (コスト:1.6) */, 41 /* こうげき! (コスト:2) */, 95 /* アクマのくちづけ (コスト:2.6) */]
       ],
-      availableSkillIds: []
+      availableSkillIds: [1,2,4,11,34,41,95,104,229,258,439,575]
     },
     {
       id: "OBS04-029",
@@ -3792,16 +3456,16 @@ const MONSTERS = {
       rarity: 4,
       attribute: "水",
       race: "悪魔",
-      stats: {"hp":"???","attack":"???","speed":"???"},
-      exSkill: "???",
-      maxCapacity: [12,15,18,21],
+      stats: {"hp":"208-220","attack":"50-53","speed":"55-58"},
+      exSkill: "悪魔の遊び♥ → 悪魔のひまつぶし♥",
+      maxCapacity: [17,21,24,28],
       initialReels: [
-        [],
-        [],
-        [],
-        []
+        [4 /* ほほえんでいる (コスト:0) */, 4 /* ほほえんでいる (コスト:0) */, 34 /* アクマのながしめ (コスト:1.6) */, 34 /* アクマのながしめ (コスト:1.6) */, 104 /* ★→★★ (コスト:3) */, 104 /* ★→★★ (コスト:3) */],
+        [2 /* ★★→★ (コスト:-1) */, 2 /* ★★→★ (コスト:-1) */, 95 /* アクマのくちづけ (コスト:2.6) */, 34 /* アクマのながしめ (コスト:1.6) */, 34 /* アクマのながしめ (コスト:1.6) */, 575 /* ふっかつの秘宝 (コスト:4.8) */],
+        [1 /* ★★★→★ (コスト:-1.2) */, 229 /* アクマのゆうわく (コスト:3.6) */, 95 /* アクマのくちづけ (コスト:2.6) */, 34 /* アクマのながしめ (コスト:1.6) */, 41 /* こうげき! (コスト:2) */, 95 /* アクマのくちづけ (コスト:2.6) */],
+        [575 /* ふっかつの秘宝 (コスト:4.8) */, 575 /* ふっかつの秘宝 (コスト:4.8) */, 229 /* アクマのゆうわく (コスト:3.6) */, 229 /* アクマのゆうわく (コスト:3.6) */, 353 /* アクマのしぐさ (コスト:4.6) */, 353 /* アクマのしぐさ (コスト:4.6) */]
       ],
-      availableSkillIds: []
+      availableSkillIds: [0,1,2,4,11,22,29,34,38,41,95,104,229,258,353,408,575]
     },
     {
       id: "OBS04-030",
