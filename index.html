@@ -50,7 +50,20 @@
         </div>
         <h2 id="monsterName" style="font-size: 1.5rem; font-weight: bold; color: #ffffff;">--</h2>
         <p id="monsterStats" style="font-size: 0.75rem; color: #94a3b8; margin-top: 0.5rem; font-family: monospace;">--</p>
-        <p id="monsterExSkill" style="font-size: 0.75rem; color: #fcd34d; margin-top: 0.25rem;">--</p>
+        
+        <!-- EX技・超EX技の表示領域 -->
+        <div id="monsterExSkillArea" style="margin-top: 0.75rem; padding-top: 0.5rem; border-top: 1px dashed #334155; font-size: 0.8rem; display: flex; flex-direction: column; gap: 0.35rem;">
+          <div>
+            <span style="color: #fcd34d; font-weight: bold;">【EX技】</span> 
+            <span id="exName" style="color: #ffffff; font-weight: bold;">--</span> : 
+            <span id="exEffect" style="color: #cbd5e1;">--</span>
+          </div>
+          <div>
+            <span style="color: #f43f5e; font-weight: bold;">【超EX技】</span> 
+            <span id="superExName" style="color: #ffffff; font-weight: bold;">--</span> : 
+            <span id="superExEffect" style="color: #cbd5e1;">--</span>
+          </div>
+        </div>
       </div>
       <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem;">
         <span style="font-size: 0.75rem; color: #34d399; font-family: monospace;">✓ 読み込み完了</span>
@@ -60,7 +73,15 @@
 
     <!-- 各リールを表示するコンテナ -->
     <div id="reelsContainer" class="grid-reels"></div>
+
+    <!-- 習得可能コマンド（技）の説明・コメント一覧セクション -->
+    <div class="glass-card" style="margin-top: 1.5rem;">
+      <h3 style="color: #fbbf24; margin-bottom: 0.5rem; font-size: 1.125rem;">📖 習得可能コマンド（技）の解説</h3>
+      <p style="font-size: 0.75rem; color: #94a3b8; margin-bottom: 1rem;">このモンスターが覚えることのできる技のタイプや、コスト、詳細コメントの一覧です。</p>
+      <div id="skillDescriptionsContainer" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.75rem;"></div>
+    </div>
   </main>
+
 
   <!-- お気に入り保存・並び替え用モーダル画面 -->
   <div id="favoritesModal" class="modal-overlay" onclick="closeFavoritesModal(event)">
@@ -83,7 +104,7 @@
     </div>
   </div>
 
-  <!-- スクリプトの読み込み（技DB -> モンスターDB -> お気に入り処理） -->
+  <!-- スクリプトの読み込み -->
   <script src="skills.js"></script>
   <script src="monsters.js"></script>
   <script src="favorites.js"></script>
@@ -98,10 +119,6 @@
       initApp();
     });
 
-    /**
-     * アプリ初期化処理
-     * オブジェクト/配列構造の両方の MONSTERS に対応して平坦化・章リストの生成を行う
-     */
     function initApp() {
       allMonstersList = [];
       if (typeof MONSTERS === 'undefined') {
@@ -112,7 +129,6 @@
       if (Array.isArray(MONSTERS)) {
         allMonstersList = MONSTERS;
       } else {
-        // オブジェクト形式 { "序章": [...], "第1章": [...] } からフラットな配列を作成
         Object.keys(MONSTERS).forEach(chapterKey => {
           const list = MONSTERS[chapterKey];
           if (Array.isArray(list)) {
@@ -126,7 +142,6 @@
         });
       }
 
-      // 章プルダウンの生成
       const chapterSelect = document.getElementById('chapterSelect');
       chapterSelect.innerHTML = '';
 
@@ -146,9 +161,6 @@
       }
     }
 
-    /**
-     * 章が切り替わった際のモンスター選択プルダウンの更新
-     */
     function onChapterChange(selectedChapter) {
       const monsterSelect = document.getElementById('monsterSelect');
       monsterSelect.innerHTML = '';
@@ -173,9 +185,6 @@
       selectMonster(filtered[0].id);
     }
 
-    /**
-     * モンスターの選択および画面全体の描画更新
-     */
     function selectMonster(monsterId, customReels = null) {
       currentMonster = allMonstersList.find(m => m.id === monsterId);
       if (!currentMonster) return;
@@ -195,8 +204,27 @@
       document.getElementById('monsterRace').textContent = `種族: ${currentMonster.race || '不明'}`;
       
       const stats = currentMonster.stats || {};
-      document.getElementById('monsterStats').textContent = `HP: ${stats.hp || '???'} | 攻撃: ${stats.attack || '???'} | スピード: ${stats.speed || '???'}`;
-      document.getElementById('monsterExSkill').textContent = `EX技: ${currentMonster.exSkill || '???'}`;
+      document.getElementById('monsterStats').textContent = `HP: ${stats.hp || '???'} | 攻撃: ${stats.attack || '???'} | スピード: ${stats.speed || '??Z'}`.replace('??Z', '???');
+
+      // 💡 EX技・超EX技の表示更新処理
+      const exData = currentMonster.exSkill;
+      if (typeof exData === 'object' && exData !== null) {
+        document.getElementById('exName').textContent = exData.normal?.name || '未入力';
+        document.getElementById('exEffect').textContent = exData.normal?.effect || '未入力';
+        document.getElementById('superExName').textContent = exData.super?.name || '未入力';
+        document.getElementById('superExEffect').textContent = exData.super?.effect || '未入力';
+      } else if (typeof exData === 'string') {
+        // 文字列の旧データが存在する場合の互換処理
+        document.getElementById('exName').textContent = exData;
+        document.getElementById('exEffect').textContent = '未入力';
+        document.getElementById('superExName').textContent = '未入力';
+        document.getElementById('superExEffect').textContent = '未入力';
+      } else {
+        document.getElementById('exName').textContent = '未入力';
+        document.getElementById('exEffect').textContent = '未入力';
+        document.getElementById('superExName').textContent = '未入力';
+        document.getElementById('superExEffect').textContent = '未入力';
+      }
 
       const reelCount = (currentMonster.maxCapacity && currentMonster.maxCapacity.length) 
         ? currentMonster.maxCapacity.length 
@@ -217,6 +245,8 @@
       }
 
       renderReels();
+      renderSkillDescriptions();
+      updateCalcSkillOptions();
     }
 
     function updateMonsterSelectOptions(chapter, activeId) {
@@ -243,10 +273,6 @@
       }
     }
 
-    /**
-     * リールスロット内のセレクトボックス用技選択肢 HTML 生成
-     * 技の Type（物理・魔法等）を含めてレンダリング
-     */
     function generateSkillOptions(selectedSkillId) {
       if (typeof SKILLS === 'undefined') return '<option value="3">ミス (コスト:0)</option>';
 
@@ -267,14 +293,10 @@
         }
         const selected = (id == selectedSkillId) ? 'selected' : '';
         const colorLabel = getColorLabel(skill.color);
-        const typeLabel = skill.type ? `[${skill.type}] ` : ''; // 技のType情報を追加
-        return `<option value="${id}" ${selected}>${colorLabel} ${typeLabel}${skill.name} (コスト:${skill.cost})</option>`;
+        return `<option value="${id}" ${selected}>${colorLabel} ${skill.name} (コスト:${skill.cost})</option>`;
       }).join('');
     }
 
-    /**
-     * リールごとのキャパシティ計算および UI 描画
-     */
     function renderReels() {
       const container = document.getElementById('reelsContainer');
       container.innerHTML = '';
@@ -345,6 +367,49 @@
       const parsedId = isNaN(Number(newSkillId)) ? newSkillId : Number(newSkillId);
       currentReels[reelIdx][slotIdx] = parsedId;
       renderReels();
+    }
+
+    function renderSkillDescriptions() {
+      const container = document.getElementById('skillDescriptionsContainer');
+      if (!container) return;
+      container.innerHTML = '';
+
+      if (!currentMonster || !currentMonster.availableSkillIds || currentMonster.availableSkillIds.length === 0) {
+        container.innerHTML = '<p style="color: #94a3b8; font-size: 0.8rem; grid-column: span 2;">このモンスターに設定された習得可能コマンドはありません。</p>';
+        return;
+      }
+
+      currentMonster.availableSkillIds.forEach(id => {
+        const skill = typeof SKILLS !== 'undefined' ? SKILLS[id] : null;
+        
+        const card = document.createElement('div');
+        card.style.background = '#0f172a';
+        card.style.border = '1px solid #334155';
+        card.style.borderRadius = '0.5rem';
+        card.style.padding = '0.75rem';
+
+        if (!skill) {
+          card.innerHTML = `<span style="font-size: 0.8rem; color: #94a3b8;">技ID: ${id} (未定義)</span>`;
+          container.appendChild(card);
+          return;
+        }
+
+        card.innerHTML = `
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem; flex-wrap: wrap; gap: 0.5rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span style="font-weight: bold; color: #fbbf24; font-size: 0.875rem;">${skill.name}</span>
+            </div>
+            <div style="display: flex; gap: 0.35rem; align-items: center; font-size: 0.7rem;">
+              <span style="background: #1e293b; color: #38bdf8; border: 1px solid #334155; padding: 0.1rem 0.4rem; border-radius: 0.25rem;">[${skill.type || '不明'}]</span>
+              <span style="background: #1e293b; color: #fbbf24; border: 1px solid #334155; padding: 0.1rem 0.4rem; border-radius: 0.25rem;">コスト: ${skill.cost}</span>
+            </div>
+          </div>
+          <div style="font-size: 0.75rem; color: #94a3b8; line-height: 1.4; border-top: 1px dashed #1e293b; padding-top: 0.35rem; margin-top: 0.25rem;">
+            ${skill.comment ? skill.comment : '詳細コメントはありません。'}
+          </div>
+        `;
+        container.appendChild(card);
+      });
     }
   </script>
 </body>
