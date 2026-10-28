@@ -1,7 +1,7 @@
 const SKILLS = {
   0: { name: "★★★★→★", cost: -2.6, type: "移動", color: "オ", comment: "移動。コストに?あり。実測例: 魔王バスカー" },
   1: { name: "★★★→★", cost: -1.2, type: "移動", color: "オ", comment: "移動。コストに?あり。モンスターによってコスト違いがある。実測例: 赤の女王" },
-  2: { name: "★★★→★", cost: -1.0, type: "移動", color: "オ", comment: "移動。コストに?あり。実測例: 魔獣クイックシルバー" },
+  2: { name: "★★→★", cost: -1.0, type: "移動", color: "オ", comment: "移動。コストに?あり。実測例: 魔獣クイックシルバー" },
   3: { name: "ミス", cost: 0.0, type: "ミス", color: "砂", comment: "ミス。実測例: 多数" },
   4: { name: "ほほえんでいる", cost: 0.0, type: "ミス", color: "砂", comment: "ミス。実測例: 魔王バスカー" },
   5: { name: "ためいき", cost: 0.0, type: "ミス", color: "砂", comment: "ミス。実測例: 白の女王" },
@@ -573,5 +573,5 @@ const SKILLS = {
   571: { name: "金筋斬り", cost: 0.0, type: "物理", color: "金", comment: "コスト不明(??)。実測例: 鍛冶師アンヴィル" },
   572: { name: "オレが全員ぶったおす!!", cost: 0.0, type: "物理", color: "金", comment: "コスト不明(??)。実測例: 烈風のナギ" },
   573: { name: "これが…月の力!!", cost: 0.0, type: "サポート", color: "金", comment: "コスト不明(??)。実測例: 水天のナギ" },
-  574: { name: "マッチョ・インパクト", cost: 0.0, type: "物理", color: "金", comment: "コスト不明(??)。実測例: トレーニー・シャッパ" }
+  574: { name: "マッチョ・インパクト", cost: 0.0, type: "物理", color: "金", comment: "コスト不明(??)。実測例: トレーニー・シャッパ" },
 };

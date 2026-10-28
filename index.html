@@ -80,6 +80,18 @@
       <p style="font-size: 0.75rem; color: #94a3b8; margin-bottom: 1rem;">このモンスターが覚えることのできる技のタイプや、コスト、詳細コメントの一覧です。</p>
       <div id="skillDescriptionsContainer" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.75rem;"></div>
     </div>
+
+    <!-- 1ターン目 技発動確率シミュレーターセクション -->
+    <div class="glass-card" style="margin-top: 1.5rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+        <h3 style="color: #fbbf24; font-size: 1.125rem;">📊 1ターン目 技発動確率</h3>
+        <button class="btn btn-amber" onclick="renderFirstTurnProbability()">🔄 再計算</button>
+      </div>
+      <p style="font-size: 0.75rem; color: #94a3b8; margin-bottom: 1rem;">現在のリール構成から、1ターン目にそれぞれの技が発動する確率を算出します。</p>
+    <div id="firstTurnProbResult">
+    <!-- ここに計算結果がテキストとして一覧表示されます -->
+  </div>
+</div>
   </main>
 
 
@@ -105,9 +117,10 @@
   </div>
 
   <!-- スクリプトの読み込み -->
-  <script src="skills.js"></script>
-  <script src="monsters.js"></script>
-  <script src="favorites.js"></script>
+  <script src="skills.js"></script> <!-- 技データの読み込み -->
+  <script src="monsters.js"></script> <!-- モンスターのデータ読み込み -->
+  <script src="favorites.js"></script> <!-- お気に入り保存・管理用スクリプト -->
+  <script src="probability.js"></script> <!-- 技発動確率計算用スクリプト -->
 
   <!-- アプリ本体の制御スクリプト -->
   <script>
@@ -244,9 +257,11 @@
         currentReels.push(reel);
       }
 
-      renderReels();
-      renderSkillDescriptions();
-      updateCalcSkillOptions();
+      renderReels(); <!-- リールUIの描画 -->
+      renderSkillDescriptions(); <!-- 技解説の描画 -->
+      updateCalcSkillOptions(); <!-- 確率計算用の技選択肢を更新 -->
+
+      renderFirstTurnProbability(); <!-- 初期表示時に1ターン目確率を計算して表示 -->
     }
 
     function updateMonsterSelectOptions(chapter, activeId) {
@@ -367,6 +382,8 @@
       const parsedId = isNaN(Number(newSkillId)) ? newSkillId : Number(newSkillId);
       currentReels[reelIdx][slotIdx] = parsedId;
       renderReels();
+
+      renderFirstTurnProbability(); <!-- スロット変更後に1ターン目確率を再計算して表示 -->
     }
 
     function renderSkillDescriptions() {
