@@ -111,7 +111,7 @@ const SKILLS = {
   109: { name: "狙い撃ち", cost: 3.0, type: "物理", color: "銅", comment: "ドーシュ 系統" },
   110: { name: "頭が高い!", cost: 3.0, type: "物理", color: "銅", comment: "実測例: 白の女王" },
   111: { name: "シャボン・グラン", cost: 3.0, type: "魔法", color: "銅", comment: "泡魔法使いポワン 系統" },
-  112: { name: "つっつき", cost: 3.0, type: "物理", color: "銅", comment: "ドラコッコ 系統" },
+  112: { name: "つっつき", cost: 3.0, type: "物理", color: "銅", comment: "倍率150%の風属性単体物理攻撃。" },
   113: { name: "紫電", cost: 3.0, type: "物理", color: "銅", comment: "剣豪ヒエン 系統" },
   114: { name: "ふぶき", cost: 3.0, type: "ブレス", color: "銅", comment: "実測例: 雪狼ガルム" },
   115: { name: "ツイン砲", cost: 3.0, type: "物理", color: "銅", comment: "ツインビー 系統" },
@@ -119,7 +119,7 @@ const SKILLS = {
   117: { name: "誤爆", cost: 3.0, type: "物理", color: "銅", comment: "実測例: ゴバクガエル" },
   118: { name: "天狗のうちわ", cost: 3.0, type: "サポート", color: "銅", comment: "実測例: 風隠の主ナナワライ" },
   119: { name: "炎と氷のいき", cost: 3.0, type: "ブレス", color: "銅", comment: "ロケテスト時は金だったが、銅に変更されている。実測例: スライム・マナ" },
-  120: { name: "はばたき", cost: 3.0, type: "物理", color: "銅", comment: "ロック鳥ルフ" },
+  120: { name: "はばたき", cost: 3.0, type: "物理", color: "銅", comment: "倍率50%の風属性全体物理攻撃。低確率で麻痺状態を付与する。" },
   121: { name: "火竜の息", cost: 3.0, type: "ブレス", color: "銅", comment: "ドラン 系統" },
   122: { name: "火竜の尾", cost: 3.0, type: "物理", color: "銅", comment: "竜人ドラン 系統" },
   123: { name: "女王のごほうび", cost: 3.0, type: "回復", color: "銅", comment: "実測例: 赤の女王" },
@@ -469,7 +469,7 @@ const SKILLS = {
   467: { name: "麻酔", cost: 5.0, type: "サポート", color: "金", comment: "コストに?あり。実測例: Dr.フランケン" },
   468: { name: "邪神の一撃", cost: 5.2, type: "物理", color: "金", comment: "実測例: 邪神バスカー" },
   469: { name: "あぶない焚塵", cost: 5.2, type: "魔法", color: "金", comment: "実測例: 導きの精霊イブリス" },
-  470: { name: "輝く風", cost: 5.2, type: "魔法", color: "金", comment: "実測例: 龍神ククルカン" },
+  470: { name: "輝く風", cost: 5.2, type: "魔法", color: "金", comment: "倍率135%の風属性全体物理攻撃。低確率で麻痺を付与する。" },
   471: { name: "リップルフリップ", cost: 5.2, type: "物理", color: "金", comment: "実測例: 湖の騎士ランスロット" },
   472: { name: "あらわな踊り", cost: 5.2, type: "サポート", color: "金", comment: "アメノウズメ 系統" },
   473: { name: "虚空剣", cost: 5.2, type: "物理", color: "金", comment: "実測例: 龍王ライシーヤ" },
@@ -575,4 +575,5 @@ const SKILLS = {
   573: { name: "これが…月の力!!", cost: 0.0, type: "サポート", color: "金", comment: "コスト不明(??)。実測例: 水天のナギ" },
   574: { name: "マッチョ・インパクト", cost: 0.0, type: "物理", color: "金", comment: "コスト不明(??)。実測例: トレーニー・シャッパ" },
   575: { name: "ふっかつの秘宝", cost: 4.8, type: "回復", color: "金", comment: "倒れた味方1体を完全蘇生する魔法技。実測例: デメラ" },
+  576: { name: "つつきまくり", cost: 3.2, type: "物理", color: "銅", comment: "倍率70%×3回のランダム3回・風属性物理攻撃。コスト推測" }
 };
