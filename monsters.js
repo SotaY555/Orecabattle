@@ -5022,6 +5022,71 @@ const MONSTERS = {
         []
       ],
       availableSkillIds: []
+    },
+    {
+      id: "OBS06-042",
+      name: "デュラ",
+      rarity: 2,
+      attribute: "火",
+      race: "アンデッド",
+      stats: {"hp":"???","attack":"???","speed":"???"},
+      exSkill: "???",
+      maxCapacity: [12,15],
+      initialReels: [
+        [],
+        []
+      ],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS06-043",
+      name: "デュラハン",
+      rarity: 3,
+      attribute: "火",
+      race: "アンデッド",
+      stats: {"hp":"???","attack":"???","speed":"???"},
+      exSkill: "???",
+      maxCapacity: [12,15,18],
+      initialReels: [
+        [],
+        [],
+        []
+      ],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS06-044",
+      name: "首無騎士デュラハン",
+      rarity: 4,
+      attribute: "火",
+      race: "アンデッド",
+      stats: {"hp":"???","attack":"???","speed":"???"},
+      exSkill: "???",
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
+      availableSkillIds: []
+    },
+    {
+      id: "OBS06-045",
+      name: "邪帝アウスレーゼ",
+      rarity: 4,
+      attribute: "土",
+      race: "アンデッド",
+      stats: {"hp":"???","attack":"???","speed":"???"},
+      exSkill: "???",
+      maxCapacity: [12,15,18,21],
+      initialReels: [
+        [],
+        [],
+        [],
+        []
+      ],
+      availableSkillIds: []
     }
   ],
   "外伝": [
